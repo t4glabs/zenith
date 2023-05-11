@@ -1,0 +1,23 @@
+{
+  "name": "bastar-se-bazaar",
+  "version": "1.0.0",
+  "description": "Bastar Se Bazaar Tak",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npx tailwindcss -i ./public/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t4glabs/bastar-se-bazaar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t4glabs/bastar-se-bazaar/issues"
+  },
+  "homepage": "https://github.com/t4glabs/bastar-se-bazaar#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
