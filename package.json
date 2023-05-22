@@ -4,7 +4,7 @@
   "description": "Bastar Se Bazaar Tak",
   "main": "index.js",
   "scripts": {
-    "build-css": "npx tailwindcss -i ./public/input.css -o ./dist/output.css --watch"
+    "build-css": "npx tailwindcss -i ./public/input.css -o ./output.css --watch"
   },
   "repository": {
     "type": "git",
