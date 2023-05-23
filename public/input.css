@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 
-/* .heroimg{
-    background-image: url('');
-} */
+.back-color{
+   background: #f8e4c9;
+}
