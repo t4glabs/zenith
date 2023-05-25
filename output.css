@@ -677,6 +677,10 @@ video {
   height: 1.5rem;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -687,6 +691,10 @@ video {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-64 {
+  width: 16rem;
 }
 
 .w-72 {
@@ -1302,7 +1310,11 @@ video {
 }
 
 .back-color{
-  background: #f8e4c9;
+  background: #ece7e0;
+}
+
+.support-bg{
+  background-color: #d55757;
 }
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -1320,8 +1332,8 @@ video {
 
 .flip-box-inner {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -1704,6 +1716,10 @@ video {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
   }
 
   .lg\:p-2 {
