@@ -9,6 +9,13 @@
 .support-bg{
    background-color: #d55757;;
 }
+.header-color{
+  background-color: #Cc6652;
+}
+
+
+
+
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
   background-color: transparent;
@@ -50,7 +57,7 @@
 
 /* Style the back side */
 .flip-box-back {
-  background-color: dodgerblue;
+  background: #ece7e0;;
   color: white;
   transform: rotateY(180deg);
 }
