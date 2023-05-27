@@ -576,8 +576,41 @@ video {
   position: relative;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
+.-top-40 {
+  top: -10rem;
+}
+
+.left-\[calc\(50\%\+3rem\)\] {
+  left: calc(50% + 3rem);
+}
+
+.left-\[calc\(50\%-11rem\)\] {
+  left: calc(50% - 11rem);
+}
+
 .right-0 {
   right: 0px;
+}
+
+.top-\[calc\(100\%-13rem\)\] {
+  top: calc(100% - 13rem);
+}
+
+.isolate {
+  isolation: isolate;
+}
+
+.-z-10 {
+  z-index: -10;
 }
 
 .mx-auto {
@@ -661,6 +694,10 @@ video {
   display: none;
 }
 
+.aspect-\[1155\/678\] {
+  aspect-ratio: 1155/678;
+}
+
 .aspect-\[3\/2\] {
   aspect-ratio: 3/2;
 }
@@ -675,6 +712,10 @@ video {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-96 {
+  height: 24rem;
 }
 
 .h-full {
@@ -695,6 +736,10 @@ video {
 
 .w-72 {
   width: 18rem;
+}
+
+.w-\[36\.125rem\] {
+  width: 36.125rem;
 }
 
 .w-full {
@@ -729,6 +774,11 @@ video {
   transform-origin: top right;
 }
 
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rotate-0 {
   --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -736,6 +786,11 @@ video {
 
 .rotate-180 {
   --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[30deg\] {
+  --tw-rotate: 30deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -753,6 +808,10 @@ video {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform-gpu {
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .appearance-none {
@@ -818,6 +877,10 @@ video {
 
 .place-self-center {
   place-self: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded {
@@ -923,6 +986,24 @@ video {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqFK8Yjbmd3MRLSCQr8wL9KwEuP7UG-mMpOw&usqp=CAU');
 }
 
+.bg-\[url\(\'https\:\/\/graph\.org\/file\/8f22ab80891ccc43e194c\.jpg\'\)\] {
+  background-image: url('https://graph.org/file/8f22ab80891ccc43e194c.jpg');
+}
+
+.bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.from-\[\#ff80b5\] {
+  --tw-gradient-from: #ff80b5 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 128 181 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-\[\#9089fc\] {
+  --tw-gradient-to: #9089fc var(--tw-gradient-to-position);
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1017,6 +1098,11 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1036,6 +1122,10 @@ video {
 
 .pb-8 {
   padding-bottom: 2rem;
+}
+
+.pt-14 {
+  padding-top: 3.5rem;
 }
 
 .pt-2 {
@@ -1060,6 +1150,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-start {
+  text-align: start;
 }
 
 .font-sans {
@@ -1135,6 +1229,10 @@ video {
   line-height: 1.75rem;
 }
 
+.leading-8 {
+  line-height: 2rem;
+}
+
 .leading-none {
   line-height: 1;
 }
@@ -1191,11 +1289,6 @@ video {
   color: rgb(124 45 18 / var(--tw-text-opacity));
 }
 
-.text-red-800 {
-  --tw-text-opacity: 1;
-  color: rgb(153 27 27 / var(--tw-text-opacity));
-}
-
 .text-red-900 {
   --tw-text-opacity: 1;
   color: rgb(127 29 29 / var(--tw-text-opacity));
@@ -1222,6 +1315,10 @@ video {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.opacity-20 {
+  opacity: 0.2;
 }
 
 .shadow {
@@ -1254,6 +1351,11 @@ video {
 
 .ring-white\/10 {
   --tw-ring-color: rgb(255 255 255 / 0.1);
+}
+
+.blur-3xl {
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .drop-shadow-2xl {
@@ -1317,12 +1419,16 @@ video {
   background-color: #Cc6652;
 }
 
+.text-color{
+  color: #Cc6652;
+}
+
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 
 .flip-box {
   background-color: transparent;
   width: 300px;
-  height: 300px;
+  height: 364px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
@@ -1365,7 +1471,7 @@ video {
 /* Style the back side */
 
 .flip-box-back {
-  background: #ece7e0;
+  background: #Cc6652;
   color: white;
   transform: rotateY(180deg);
 }
@@ -1529,6 +1635,26 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:-top-80 {
+    top: -20rem;
+  }
+
+  .sm\:left-\[calc\(50\%\+36rem\)\] {
+    left: calc(50% + 36rem);
+  }
+
+  .sm\:left-\[calc\(50\%-30rem\)\] {
+    left: calc(50% - 30rem);
+  }
+
+  .sm\:top-\[calc\(100\%-30rem\)\] {
+    top: calc(100% - 30rem);
+  }
+
+  .sm\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .sm\:ml-4 {
     margin-left: 1rem;
   }
@@ -1549,6 +1675,10 @@ video {
     width: 16rem;
   }
 
+  .sm\:w-\[72\.1875rem\] {
+    width: 72.1875rem;
+  }
+
   .sm\:max-w-md {
     max-width: 28rem;
   }
@@ -1561,8 +1691,17 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
   .sm\:place-self-center {
     place-self: center;
+  }
+
+  .sm\:py-48 {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
   }
 
   .sm\:py-8 {
@@ -1572,6 +1711,11 @@ video {
 
   .sm\:pt-24 {
     padding-top: 6rem;
+  }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .sm\:text-lg {
@@ -1742,9 +1886,23 @@ video {
     padding: 1.5rem;
   }
 
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:py-56 {
+    padding-top: 14rem;
+    padding-bottom: 14rem;
   }
 
   .lg\:pt-12 {
@@ -1772,6 +1930,11 @@ video {
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .lg\:text-xl {

@@ -16,8 +16,7 @@
 		<div x-data="{ open: false }"
 			class="p-2 flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row">
 			<div class="flex flex-row items-center justify-between">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ16y2YjmEQDPyzuVVldMO8Fnc5vrfYufDQk0qNyWP&s"
-					alt="logo" class="h-24 w-72">
+				<img src="public/about us img/logo.png" alt="logo-img" class=" w-64">
 				<button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
 					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-900">
 						<path x-show="!open" fill-rule="evenodd"
@@ -51,15 +50,24 @@
 					href="#">Donate</a>
 			</nav>
 		</div>
+		<div class="header-color h-4"></div>
 
 	</div>
 	<!-- ******* -->
+
+
 	<!-- ******************* -->
 	<!-- hero Section  -->
 
 
 	<section
-		class="flex justify-center bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqFK8Yjbmd3MRLSCQr8wL9KwEuP7UG-mMpOw&usqp=CAU')] dark:bg-gray-900 pt-60 pb-56">
+		class="flex justify-center bg-cover bg-[url('https://graph.org/file/8f22ab80891ccc43e194c.jpg')] dark:bg-gray-900 pt-60 pb-56">
+		<div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+			aria-hidden="true">
+			<div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+				style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+			</div>
+		</div>
 		<div class="flex justify-center max-w-screen-xl px-8 py-8 mx-auto ">
 			<div class="mr-auto place-self-center bg-cover">
 				<h1
@@ -82,6 +90,29 @@
 	</section>
 
 	<!-- ******************* -->
+	<!-- <div class="bg-gray-900">
+		
+	  
+		<div class="relative isolate overflow-hidden pt-14">
+		  <img src="https://graph.org/file/8f22ab80891ccc43e194c.jpg" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+		  <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+			<div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+		  </div>
+		  <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+			<div class="hidden sm:mb-8 sm:flex sm:justify-center">
+			  
+			<div class="text-center">
+			
+			  <h1 class="font-bold tracking-tight text-white sm:text-6xl">EMPOWERING COMMUNITIES TO ACCESS JUSTICE</h1>
+			  <p class="mt-6 text-lg leading-8 text-gray-300">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+			  
+			</div>
+		  </div>
+		  <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+			<div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+		  </div>
+		</div>
+	  </div> -->
 
 
 	<!-- Main body  -->
@@ -96,7 +127,7 @@
 				<div class="grid lg:grid-cols-2 gap-6 flex items-center justify-center">
 					<div class="">
 						<h1
-							class="max-w-2xl mb-4 text-3xl font-bold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white text-center text-red-800">
+							class="max-w-2xl mb-4 text-3xl font-bold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white text-center text-color">
 							WHY
 							COMMUNITY
 							EMPOWERMENT?</h1>
@@ -115,7 +146,7 @@
 
 						<div
 							class="max-w-2xl mb-6 font-medium text-base md:text-lg lg:text-base dark:text-gray-400 lg:p-6 p-2">
-							<ul class="text-red-800">
+							<ul class="text-color">
 								<li>◆ Lack of understanding of rights</li>
 								<li>◆ Inability to exercise and enforce their right</li>
 								<li>◆ Failure of the state to deliver justice</li>
@@ -140,17 +171,20 @@
 
 	<section class="">
 
-		<div class="px-6 py-12 bg-white text-gray-800 text-center lg:text-left">
+		<div class="px-6 py-8 bg-white text-gray-800 text-center lg:text-left">
 
 			<!-- <div class="px-6 py-20 md:px-2 bg-gray-50 text-gray-800 text-center lg:text-left"> -->
 			<div class="container mx-auto xl:px-32">
+				<h1
+					class="text-3xl font-bold  text-color capitalize md:text-lg lg:text-4xl dark:text-white lg:p-8 p-4 text-center">
+					how does Zenith address this?
+				</h1>
 				<div class="lg:gap-12 flex items-center justify-center flex-col gap-6 lg:flex-row md:flex-row">
 
 					<div class="flip-box lg:h-80 lg:w-2/4">
 						<div class="flip-box-inner">
 							<div class="flip-box-front">
-								<img src="https://via.placeholder.com/640x360"
-									alt="Paris" class="" >
+								<img src="public/about us img/gruop-img.jpg" alt="Paris" class="">
 							</div>
 							<div class="flip-box-back">
 								<h2>Paris</h2>
@@ -161,13 +195,25 @@
 
 					<div class="flip-box lg:h-80 lg:w-2/4">
 						<div class="flip-box-inner">
-							<div class="flip-box-front">
-								<img src="https://via.placeholder.com/640x360"
-									alt="Paris" >
-							</div>
+							<!-- <div class="flip-box-front">
+								<img src="public/about us img/gruop-img.jpg" alt="Paris">
+							</div> -->
 							<div class="flip-box-back">
-								<h2>Paris</h2>
-								<p>What an amazing city</p>
+								<h1
+									class="max-w-2xl text-lg font-bold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white text-white p-4">
+									CLE
+								</h1>
+
+								<p
+									class="text-start p-6 lg:px-12 font-medium text-black lg:mb-8 md:text-lg lg:text-lg dark:text-gray-400 text-white">
+									We engage Law Students in clinical
+									legal aid work to build capacities,
+									perspectives, and empathy to work
+									towards building just and equitable
+									spaces in society </p>
+							</div>
+							<div class="flip-box-front">
+								<img src="public/about us img/gruop-img.jpg" alt="Paris">
 							</div>
 						</div>
 					</div>
@@ -199,12 +245,12 @@
 					<div class="mb-12 lg:mb-0">
 
 						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTulBjhahpNKAj-anjPjqGTU7y_u_lM8S8n_ny_nWg&s"
-						class="h-full w-full rounded-lg drop-shadow-2xl" alt="logo" />
+							class="h-full w-full rounded-lg drop-shadow-2xl" alt="logo" />
 					</div>
 					<div class="mb-12 lg:mb-0">
 
 						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTulBjhahpNKAj-anjPjqGTU7y_u_lM8S8n_ny_nWg&s"
-						class="h-full w-full rounded-lg drop-shadow-2xl" alt="logo" />
+							class="h-full w-full rounded-lg drop-shadow-2xl" alt="logo" />
 					</div>
 				</div>
 			</div>
@@ -215,9 +261,9 @@
 
 
 	<!-- <section class="flex justify-center bg-cover dark:bg-gray-900 pt-60 pb-60 h-full"> -->
-	<div>
+	<div class="p-2 lg:p-8">
 		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqFK8Yjbmd3MRLSCQr8wL9KwEuP7UG-mMpOw&usqp=CAU"
-			alt="" class="w-full">
+			alt="" class="w-full h-96">
 	</div>
 	<!-- </section> -->
 
