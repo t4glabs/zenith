@@ -576,13 +576,29 @@ video {
   position: relative;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
 .inset-x-0 {
   left: 0px;
   right: 0px;
 }
 
+.-top-40 {
+  top: -10rem;
+}
+
 .left-1\/2 {
   left: 50%;
+}
+
+.left-\[calc\(50\%\+3rem\)\] {
+  left: calc(50% + 3rem);
+}
+
+.left-\[calc\(50\%-11rem\)\] {
+  left: calc(50% - 11rem);
 }
 
 .right-0 {
@@ -591,6 +607,14 @@ video {
 
 .top-\[-10rem\] {
   top: -10rem;
+}
+
+.top-\[calc\(100\%-13rem\)\] {
+  top: calc(100% - 13rem);
+}
+
+.isolate {
+  isolation: isolate;
 }
 
 .-z-10 {
@@ -707,8 +731,8 @@ video {
   height: 1.5rem;
 }
 
-.h-64 {
-  height: 16rem;
+.h-96 {
+  height: 24rem;
 }
 
 .h-full {
@@ -1001,6 +1025,10 @@ video {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqFK8Yjbmd3MRLSCQr8wL9KwEuP7UG-mMpOw&usqp=CAU');
 }
 
+.bg-\[url\(\'https\:\/\/graph\.org\/file\/8f22ab80891ccc43e194c\.jpg\'\)\] {
+  background-image: url('https://graph.org/file/8f22ab80891ccc43e194c.jpg');
+}
+
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
@@ -1124,6 +1152,11 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1143,6 +1176,10 @@ video {
 
 .pb-8 {
   padding-bottom: 2rem;
+}
+
+.pt-14 {
+  padding-top: 3.5rem;
 }
 
 .pt-2 {
@@ -1171,6 +1208,10 @@ video {
 
 .text-justify {
   text-align: justify;
+}
+
+.text-start {
+  text-align: start;
 }
 
 .font-sans {
@@ -1321,11 +1362,6 @@ video {
   color: rgb(124 45 18 / var(--tw-text-opacity));
 }
 
-.text-red-800 {
-  --tw-text-opacity: 1;
-  color: rgb(153 27 27 / var(--tw-text-opacity));
-}
-
 .text-red-900 {
   --tw-text-opacity: 1;
   color: rgb(127 29 29 / var(--tw-text-opacity));
@@ -1356,6 +1392,10 @@ video {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.opacity-20 {
+  opacity: 0.2;
 }
 
 .opacity-30 {
@@ -1467,13 +1507,21 @@ video {
   background-color: #d55757;
 }
 
+.header-color{
+  background-color: #Cc6652;
+}
+
+.text-color{
+  color: #Cc6652;
+}
+
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 
 .flip-box {
   background-color: transparent;
-  width: 500px;
-  height: 480px;
-  /* border: 1px solid #f1f1f1; */
+  width: 300px;
+  height: 364px;
+  border: 1px solid #f1f1f1;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
 }
@@ -1482,8 +1530,8 @@ video {
 
 .flip-box-inner {
   position: relative;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -1508,14 +1556,14 @@ video {
 /* Style the front side (fallback if image is missing) */
 
 .flip-box-front {
-  /* background-color: #bbb; */
+  background-color: #bbb;
   color: black;
 }
 
 /* Style the back side */
 
 .flip-box-back {
-  /* background-color: dodgerblue; */
+  background: #Cc6652;
   color: white;
   transform: rotateY(180deg);
 }
@@ -1708,6 +1756,18 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:-top-80 {
+    top: -20rem;
+  }
+
+  .sm\:left-\[calc\(50\%\+36rem\)\] {
+    left: calc(50% + 36rem);
+  }
+
+  .sm\:left-\[calc\(50\%-30rem\)\] {
+    left: calc(50% - 30rem);
+  }
+
   .sm\:left-\[calc\(50\%-40rem\)\] {
     left: calc(50% - 40rem);
   }
@@ -1716,8 +1776,16 @@ video {
     top: -20rem;
   }
 
+  .sm\:top-\[calc\(100\%-30rem\)\] {
+    top: calc(100% - 30rem);
+  }
+
   .sm\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .sm\:mb-8 {
+    margin-bottom: 2rem;
   }
 
   .sm\:ml-4 {
@@ -1756,6 +1824,10 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
   .sm\:place-self-center {
     place-self: center;
   }
@@ -1763,6 +1835,11 @@ video {
   .sm\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  .sm\:py-48 {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
   }
 
   .sm\:py-8 {
@@ -1777,6 +1854,11 @@ video {
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .sm\:text-lg {
@@ -1911,6 +1993,14 @@ video {
     display: flex;
   }
 
+  .lg\:h-80 {
+    height: 20rem;
+  }
+
+  .lg\:w-2\/4 {
+    width: 50%;
+  }
+
   .lg\:max-w-none {
     max-width: none;
   }
@@ -1947,9 +2037,23 @@ video {
     padding: 1.5rem;
   }
 
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:py-56 {
+    padding-top: 14rem;
+    padding-bottom: 14rem;
   }
 
   .lg\:pt-12 {
@@ -1977,6 +2081,11 @@ video {
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .lg\:text-xl {
@@ -2028,3 +2137,5 @@ video {
     line-height: 1;
   }
 }
+
+
