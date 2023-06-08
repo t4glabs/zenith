@@ -743,6 +743,10 @@ video {
   height: 100%;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -779,10 +783,6 @@ video {
   max-width: 42rem;
 }
 
-.max-w-4xl {
-  max-width: 56rem;
-}
-
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -799,13 +799,8 @@ video {
   max-width: 1280px;
 }
 
-<<<<<<< HEAD
-.max-w-sm {
-  max-width: 24rem;
-=======
 .max-w-xl {
   max-width: 36rem;
->>>>>>> 76a8991c156ed340263c35f9a57377200bdc3e17
 }
 
 .flex-grow {
@@ -1042,12 +1037,12 @@ video {
   background-image: url('https://graph.org/file/8f22ab80891ccc43e194c.jpg');
 }
 
-.bg-\[url\(\'public\/Img\/hero-section-img\.png\'\)\] {
-  background-image: url('public/Img/hero-section-img.png');
-}
-
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'https\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcSqFK8Yjbmd3MRLSCQr8wL9KwEuP7UG-mMpOw\&usqp\=CAU\'\)\] {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqFK8Yjbmd3MRLSCQr8wL9KwEuP7UG-mMpOw&usqp=CAU');
 }
 
 .from-\[\#ff80b5\] {
@@ -1532,41 +1527,13 @@ video {
   color: #Cc6652;
 }
 
-.text-color-second{
-  color: #Cc6652;
-}
-
-.text{
-  background: #ece7e0;
-}
-
-.back-color-second{
-  color: #Cc6652;
-}
-
-.div-box-1{
-  position: absolute;
-  top: 50px;
-  width: 30%;
-  left: 47px;
-  background-color: #Cc6652;
-}
-
-.div-box-2{
-  right: 18px;
-  position: absolute;
-  top: 265px;
-  width: 26%;
-  background-color: #Cc6652;
-}
-
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 
 .flip-box {
   background-color: transparent;
   width: 300px;
   height: 364px;
-  /* border: 1px solid #f1f1f1; */
+  border: 1px solid #f1f1f1;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
 }
@@ -1576,7 +1543,7 @@ video {
 .flip-box-inner {
   position: relative;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -1593,7 +1560,7 @@ video {
 .flip-box-front, .flip-box-back {
   position: absolute;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   /* Safari */
   backface-visibility: hidden;
 }
@@ -1613,24 +1580,6 @@ video {
   transform: rotateY(180deg);
 }
 
-<<<<<<< HEAD
-/* font style  */
-
-.font-style{
-  font-family: 'Nunito Sans', sans-serif;
-}
-
-.font-style-second{
-  font-family: 'Nunito Sans', sans-serif;
-}
-
-.line-height{
-  height: 12px;
-}
-
-.hero-img-height{
-  height: 710px;
-=======
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -1639,7 +1588,6 @@ video {
 .placeholder\:text-gray-400::placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
->>>>>>> 76a8991c156ed340263c35f9a57377200bdc3e17
 }
 
 .placeholder\:text-gray-500::-moz-placeholder {
@@ -1650,11 +1598,6 @@ video {
 .placeholder\:text-gray-500::placeholder {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.hover\:bg-gray-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-200:hover {
@@ -1705,11 +1648,6 @@ video {
 .hover\:text-orange-400:hover {
   --tw-text-opacity: 1;
   color: rgb(251 146 60 / var(--tw-text-opacity));
-}
-
-.hover\:text-red-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
 .hover\:text-red-800:hover {
@@ -2046,11 +1984,6 @@ video {
     line-height: 1;
   }
 
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -2236,3 +2169,5 @@ video {
     line-height: 1;
   }
 }
+
+
