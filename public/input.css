@@ -17,6 +17,39 @@
  color: #Cc6652;
 }
 
+.text-color-second{
+  color: #Cc6652;
+ }
+
+
+ .text{
+  background: #ece7e0;;
+}
+
+.back-color-second{
+  color: #Cc6652;
+ }
+
+
+
+
+.div-box-1{
+  position: absolute;
+    top: 50px;
+    width: 30%;
+    left: 47px;
+    background-color: #Cc6652;
+}
+
+
+
+.div-box-2{
+  right: 18px;
+  position: absolute;
+  top: 265px;
+  width: 26%;
+    background-color: #Cc6652;
+}
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
@@ -24,7 +57,7 @@
   width: 300px;
   height: 364px;
 
-  border: 1px solid #f1f1f1;
+  /* border: 1px solid #f1f1f1; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -32,7 +65,7 @@
 .flip-box-inner {
   position: relative;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -47,7 +80,7 @@
 .flip-box-front, .flip-box-back {
   position: absolute;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
@@ -66,3 +99,25 @@
 }
 
 
+
+
+/* font style  */
+
+.font-style{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.font-style-second{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.line-height{
+  height: 12px;
+}
+
+
+
+.hero-img-height{
+  height: 710px;
+}
