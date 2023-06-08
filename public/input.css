@@ -66,3 +66,18 @@
 }
 
 
+/* font style  */
+
+.font-style{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.font-style-second{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.line-height{
+  height: 12px;
+}

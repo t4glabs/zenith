@@ -6,9 +6,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Zenith</title>
 	<link href="output.css" rel="stylesheet">
+
+
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+<!-- *************** -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-stone-50 font-sans leading-normal tracking-normal">
+
+
+</head>
+
+<body class="font-style bg-stone-50 font-sans leading-normal tracking-normal">
 
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
@@ -16,7 +29,7 @@
 		<div x-data="{ open: false }"
 			class="p-2 flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row">
 			<div class="flex flex-row items-center justify-between">
-				<img src="public/about us img/logo.png" alt="logo-img" class=" w-64">
+				<img src="public/img/logo.png" alt="logo-img" class=" w-64">
 				<button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
 					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-900">
 						<path x-show="!open" fill-rule="evenodd"
@@ -28,27 +41,7 @@
 					</svg>
 				</button>
 			</div>
-			<!-- <nav :class="{'flex': open, 'hidden': !open}"
-				class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row gap-6 p-6 lg:p-2">
-				<a class="mt-2 text-sm font-semibold text-black rounded-lg  md:mt-0 hover:text-red-800 focus:outline-none focus:shadow-outline hover:underline"
-					href="#">About Us</a>
-
-				<a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline "
-					href="./programmes.html">Programmes</a>
-				<a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-					href="./spaces.html">Spaces</a>
-				<a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-					href="./stories.html">Stories</a>
-
-				<a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-					href="./media-publication.html">Media/Publications</a>
-				<a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-					href="./work-with-us.html">Work with us</a>
-				<a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-					href="./contact.html">Contact Us</a>
-				<a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800  dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-					href="./donate.html">Donate</a>
-			</nav> -->
+			
 
 			<nav :class="{'flex': open, 'hidden': !open}"
 				class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row gap-6 p-6 lg:p-2">
@@ -102,7 +95,7 @@
 			</nav>
 
 		</div>
-		<div class="header-color h-4"></div>
+		<div class="header-color line-height"></div>
 
 	</div>
 	<!-- ******* -->
@@ -113,7 +106,7 @@
 
 
 	<section
-		class="flex justify-center bg-cover bg-[url('https://graph.org/file/8f22ab80891ccc43e194c.jpg')] dark:bg-gray-900 pt-60 pb-56">
+		class="flex justify-center bg-cover bg-[url('public/img/hero-section-img.png')] dark:bg-gray-900 pt-60 pb-56">
 		<div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
 			aria-hidden="true">
 			<div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
@@ -236,11 +229,17 @@
 					<div class="flip-box lg:h-80 lg:w-2/4">
 						<div class="flip-box-inner">
 							<div class="flip-box-front">
-								<img src="public/about us img/gruop-img.jpg" alt="Paris" class="">
+								<img src="public/img/gruop-img.jpg" alt="Paris" class="">
 							</div>
 							<div class="flip-box-back">
-								<h2>Paris</h2>
-								<p>What an amazing city</p>
+								<h1
+									class="max-w-2xl text-lg font-bold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white text-white p-4">
+								Lorem.
+								</h1>
+
+								<p
+									class="text-start p-6 lg:px-12 font-medium text-black lg:mb-8 md:text-lg lg:text-lg dark:text-gray-400 text-white">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus cum odit magni quod quos commodi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque! </p>
 							</div>
 						</div>
 					</div>
@@ -248,7 +247,7 @@
 					<div class="flip-box lg:h-80 lg:w-2/4">
 						<div class="flip-box-inner">
 							<!-- <div class="flip-box-front">
-								<img src="public/about us img/gruop-img.jpg" alt="Paris">
+								<img src="public/img/gruop-img.jpg" alt="Paris">
 							</div> -->
 							<div class="flip-box-back">
 								<h1
@@ -265,7 +264,7 @@
 									spaces in society </p>
 							</div>
 							<div class="flip-box-front">
-								<img src="public/about us img/gruop-img.jpg" alt="Paris">
+								<img src="public/img/gruop-img.jpg" alt="Paris">
 							</div>
 						</div>
 					</div>

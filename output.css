@@ -1041,6 +1041,58 @@ video {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\'\'\)\] {
+  background-image: url('');
+}
+
+.bg-\[url\(\'pu\'\)\] {
+  background-image: url('pu');
+}
+
+.bg-\[url\(\'public\/\'\)\] {
+  background-image: url('public/');
+}
+
+.bg-\[url\(\'public\/a\'\)\] {
+  background-image: url('public/a');
+}
+
+.bg-\[url\(\'public\/ab\'\)\] {
+  background-image: url('public/ab');
+}
+
+.bg-\[url\(\'public\/about-us-imf\'\)\] {
+  background-image: url('public/about-us-imf');
+}
+
+.bg-\[url\(\'public\/about-us-img\/\'\)\] {
+  background-image: url('public/about-us-img/');
+}
+
+.bg-\[url\(\'public\/about-us-img\/j\'\)\] {
+  background-image: url('public/about-us-img/j');
+}
+
+.bg-\[url\(\'public\/about-us-img\/hero\'\)\] {
+  background-image: url('public/about-us-img/hero');
+}
+
+.bg-\[url\(\'public\/about-us-img\/hero-section-\'\)\] {
+  background-image: url('public/about-us-img/hero-section-');
+}
+
+.bg-\[url\(\'public\/about-us-img\/hero-section-img\'\)\] {
+  background-image: url('public/about-us-img/hero-section-img');
+}
+
+.bg-\[url\(\'public\/img\/hero-section-img\'\)\] {
+  background-image: url('public/img/hero-section-img');
+}
+
+.bg-\[url\(\'public\/img\/hero-section-img\.png\'\)\] {
+  background-image: url('public/img/hero-section-img.png');
+}
+
 .from-\[\#ff80b5\] {
   --tw-gradient-from: #ff80b5 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 128 181 / 0) var(--tw-gradient-to-position);
@@ -1574,6 +1626,20 @@ video {
   background: #Cc6652;
   color: white;
   transform: rotateY(180deg);
+}
+
+/* font style  */
+
+.font-style{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.font-style-second{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.line-height{
+  height: 12px;
 }
 
 .placeholder\:text-gray-400::-moz-placeholder {
@@ -2165,5 +2231,3 @@ video {
     line-height: 1;
   }
 }
-
-
