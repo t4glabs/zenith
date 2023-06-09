@@ -4,7 +4,7 @@
 
 
 .back-color{
-   background: #ece7e0;;
+   background: #f9f2e7;;
 }
 .support-bg{
    background-color: #d55757;;
@@ -24,7 +24,7 @@
   width: 300px;
   height: 364px;
 
-  border: 1px solid #f1f1f1;
+  /* border: 1px solid #f1f1f1; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -47,7 +47,8 @@
 .flip-box-front, .flip-box-back {
   position: absolute;
   width: 100%;
-  height: 100%;
+
+  /* height: 100%; */
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
@@ -80,4 +81,28 @@
 
 .line-height{
   height: 12px;
+}
+
+
+.img-size{
+  height: 700px;
+
+}
+
+.approch-img-size{
+  height: 203px;
+    width: 295px;
+}
+
+
+.Malanpur-Labour{
+  background-color: #Cc6652;
+  width: 468px;
+
+}
+
+
+.first-div{
+  top: -680px;
+  left: 9px;
 }
