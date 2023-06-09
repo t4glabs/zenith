@@ -1570,15 +1570,17 @@ video {
   width: 295px;
 }
 
+/* 
 .Malanpur-Labour{
   background-color: #Cc6652;
   width: 468px;
-}
 
-.first-div{
+} */
+
+/* .first-div{
   top: -680px;
   left: 9px;
-}
+} */
 
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
@@ -1848,9 +1850,9 @@ video {
     padding-bottom: 8rem;
   }
 
-  .sm\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .sm\:pt-24 {
