@@ -1013,6 +1013,10 @@ video {
   background-color: rgb(255 255 255 / 0.05);
 }
 
+.bg-\[url\(\'public\/img\/Access\.png\'\)\] {
+  background-image: url('public/img/Access.png');
+}
+
 .bg-\[url\(\'public\/img\/hero-section-img\.png\'\)\] {
   background-image: url('public/img/hero-section-img.png');
 }
@@ -1151,10 +1155,6 @@ video {
 
 .pb-56 {
   padding-bottom: 14rem;
-}
-
-.pb-60 {
-  padding-bottom: 15rem;
 }
 
 .pb-8 {
@@ -1482,6 +1482,10 @@ video {
   background: #f9f2e7;
 }
 
+.back-color-dark{
+  background: #f3eadc;
+}
+
 .support-bg{
   background-color: #d55757;
 }
@@ -1492,6 +1496,10 @@ video {
 
 .text-color{
   color: #Cc6652;
+}
+
+.text-second{
+  color: #f9f2e7;
 }
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -2073,12 +2081,21 @@ video {
     padding-top: 3rem;
   }
 
+  .lg\:pt-24 {
+    padding-top: 6rem;
+  }
+
   .lg\:pt-32 {
     padding-top: 8rem;
   }
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:text-3xl {
@@ -2135,6 +2152,10 @@ video {
 
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .xl\:gap-20 {
