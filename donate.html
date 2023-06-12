@@ -2,67 +2,168 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenith</title>
-    <link href="output.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Zenith</title>
+	<link href="output.css" rel="stylesheet">
+
+
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+<!-- *************** -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-stone-50 font-sans leading-normal tracking-normal">
 
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <div class="w-full text-gray-300 bg-white drop-shadow-md">
-        <div x-data="{ open: false }"
-            class="p-2 flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row">
-            <div class="flex flex-row items-center justify-between">
-                <img src="public/about us img/logo.png" alt="logo-img" class=" w-64">
-                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-900">
-                        <path x-show="!open" fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path>
-                        <path x-show="open" fill-rule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
+</head>
+
+<body class="font-style bg-stone-50 font-sans leading-normal tracking-normal">
+
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+	<div class="w-full text-gray-300 bg-white drop-shadow-md">
+		<div x-data="{ open: false }"
+			class="p-2 flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row">
+			<div class="flex flex-row items-center justify-between">
+				<img src="public/img/logo.png" alt="logo-img" class=" w-64">
+				<button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-900">
+						<path x-show="!open" fill-rule="evenodd"
+							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+							clip-rule="evenodd"></path>
+						<path x-show="open" fill-rule="evenodd"
+							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</button>
+			</div>
+			
+
+			<nav :class="{'flex': open, 'hidden': !open}"
+				class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row gap-6 p-6 lg:p-2">
+
+				<a class="mt-2 text-base font-semibold text-black rounded-lg  md:mt-0 hover:text-red-800 focus:outline-none focus:shadow-outline hover:underline"
+					href="index.html">About Us</a>
+
+
+				<div @click.away="open = false" class="relative" x-data="{ open: false }">
+					<button @click="open = !open"
+						class="flex flex-row items-center w-full  text-black  text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline text-left bg-transparent rounded-lg   focus:shadow-outline">
+						<a href="#">Our Work</a>
+						<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+							class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+							<path fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<div x-show="open" x-transition:enter="transition ease-out duration-100"
+						x-transition:enter-start="transform opacity-0 scale-95"
+						x-transition:enter-end="transform opacity-100 scale-100"
+						x-transition:leave="transition ease-in duration-75"
+						x-transition:leave-start="transform opacity-100 scale-100"
+						x-transition:leave-end="transform opacity-0 scale-95"
+						class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+						<div class="px-2 py-2 bg-white rounded-md shadow text-black">
+							<a class="block px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg    md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+								href="programmes.html">Programmes</a>
+							<a class="block px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg   md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+								href="programmes.html">Projects</a>
+
+						</div>
+					</div>
+				</div>
+				
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="spaces.html">Spaces</a>
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="stories.html">Stories</a>
+
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="media-publication.html">Media/Publications</a>
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="work-with-us.html">Work with us</a>
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="contact.html">Contact Us</a>
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800    md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="donate.html">Donate</a>
+
+			</nav>
+
+		</div>
+		<div class="header-color line-height"></div>
+
+	</div>
+	<!-- ****  Header End   *** -->
+    <!-- *** header end **** -->
+
+    <!-- contact section -->
+    <div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+            aria-hidden="true">
+            <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
             </div>
-            <nav :class="{'flex': open, 'hidden': !open}"
-                class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row gap-6 p-6 lg:p-2">
-                <a class="mt-2 text-sm font-semibold text-black rounded-lg  md:mt-0 hover:text-red-800 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./index.html">About Us</a>
-
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline "
-                    href="./programmes.html">Programmes</a>
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./spaces.html">Spaces</a>
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./stories.html">Stories</a>
-
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./media-publication.html">Media/Publications</a>
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./work-with-us.html">Work with us</a>
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./contact.html">Contact Us</a>
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800  dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="#">Donate</a>
-            </nav>
         </div>
-        <!-- <div class="header-color h-4"></div> -->
+        <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact sales</h2>
+            <p class="mt-2 text-lg leading-8 text-gray-600">Aute magna irure deserunt veniam aliqua magna enim
+                voluptate.</p>
+        </div>
+        <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                <div>
+                    <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First
+                        name</label>
+                    <div class="mt-2.5">
+                        <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    </div>
+                </div>
+                <div>
+                    <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
+                    <div class="mt-2.5">
+                        <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    </div>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Company</label>
+                    <div class="mt-2.5">
+                        <input type="text" name="company" id="company" autocomplete="organization"
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    </div>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+                    <div class="mt-2.5">
+                        <input type="email" name="email" id="email" autocomplete="email"
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    </div>
+                </div>
 
+                <div class="sm:col-span-2">
+                    <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
+                    <div class="mt-2.5">
+                        <textarea name="message" id="message" rows="4"
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10">
+                <button type="submit"
+                    class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    Submit</button>
+            </div>
+        </form>
     </div>
-    <!-- ******* -->
 
 
-    <!-- Hero -->
-    <section>
-        <div class="text-center font-bold">Donate Now</div>
-    </section>
-    <!-- Hero end -->
-
-    <!-- footer -->
+    <!-- footer start-->
     <footer class="bg-gray-900" aria-labelledby="footer-heading">
         <h2 id="footer-heading" class="sr-only">Footer</h2>
         <div class="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">

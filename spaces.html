@@ -2,57 +2,103 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenith</title>
-    <link href="output.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Zenith</title>
+	<link href="output.css" rel="stylesheet">
+
+
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+<!-- *************** -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-stone-50 font-sans leading-normal tracking-normal">
 
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <div class="w-full text-gray-300 bg-white drop-shadow-md">
-        <div x-data="{ open: false }"
-            class="p-2 flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row">
-            <div class="flex flex-row items-center justify-between">
-                <img src="public/about us img/logo.png" alt="logo-img" class=" w-64">
-                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-900">
-                        <path x-show="!open" fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path>
-                        <path x-show="open" fill-rule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </div>
-            <nav :class="{'flex': open, 'hidden': !open}"
-                class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row gap-6 p-6 lg:p-2">
-                <a class="mt-2 text-sm font-semibold text-black rounded-lg  md:mt-0 hover:text-red-800 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./index.html">About Us</a>
+</head>
 
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline "
-                    href="./programmes.html">Programmes</a>
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="#">Spaces</a>
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./stories.html">Stories</a>
+<body class="font-style bg-stone-50 font-sans leading-normal tracking-normal">
 
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./media-publication.html">Media/Publications</a>
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./work-with-us.html">Work with us</a>
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800 dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./contact.html">Contact Us</a>
-                <a class="text-black mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-red-800  dark-mode:bg-transparent  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
-                    href="./donate.html">Donate</a>
-            </nav>
-        </div>
-        <!-- <div class="header-color h-4"></div> -->
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    </div>
+	<div class="w-full text-gray-300 bg-white drop-shadow-md">
+		<div x-data="{ open: false }"
+			class="p-2 flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row">
+			<div class="flex flex-row items-center justify-between">
+				<img src="public/img/logo.png" alt="logo-img" class=" w-64">
+				<button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-900">
+						<path x-show="!open" fill-rule="evenodd"
+							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+							clip-rule="evenodd"></path>
+						<path x-show="open" fill-rule="evenodd"
+							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</button>
+			</div>
+			
+
+			<nav :class="{'flex': open, 'hidden': !open}"
+				class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row gap-6 p-6 lg:p-2">
+
+				<a class="mt-2 text-base font-semibold text-black rounded-lg  md:mt-0 hover:text-red-800 focus:outline-none focus:shadow-outline hover:underline"
+					href="index.html">About Us</a>
+
+
+				<div @click.away="open = false" class="relative" x-data="{ open: false }">
+					<button @click="open = !open"
+						class="flex flex-row items-center w-full  text-black  text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline text-left bg-transparent rounded-lg focus:shadow-outline">
+						<a href="#">Our Work</a>
+						<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+							class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+							<path fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<div x-show="open" x-transition:enter="transition ease-out duration-100"
+						x-transition:enter-start="transform opacity-0 scale-95"
+						x-transition:enter-end="transform opacity-100 scale-100"
+						x-transition:leave="transition ease-in duration-75"
+						x-transition:leave-start="transform opacity-100 scale-100"
+						x-transition:leave-end="transform opacity-0 scale-95"
+						class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+						<div class="px-2 py-2 bg-white rounded-md shadow  text-black">
+							<a class="block px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg   md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+								href="programmes.html">Programmes</a>
+							<a class="block px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg   md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+								href="programmes.html">Projects</a>
+
+						</div>
+					</div>
+				</div>
+				
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="spaces.html">Spaces</a>
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="stories.html">Stories</a>
+
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="media-publication.html">Media/Publications</a>
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="work-with-us.html">Work with us</a>
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="contact.html">Contact Us</a>
+				<a class="text-black mt-2 text-base font-semibold bg-transparent rounded-lg hover:text-red-800    md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+					href="donate.html">Donate</a>
+
+			</nav>
+
+		</div>
+		<div class="header-color line-height"></div>
+
+	</div>
+	<!-- ****  Header End   *** -->
     <!-- *** header end **** -->
 
 
@@ -64,7 +110,7 @@
         <div class="px-6 py-12 bg-gray-50 text-gray-800 text-center lg:text-left">
 
             <div class="container mx-auto xl:px-32">
-                <h1 class="text-3xl font-semibold text-black capitalize lg:text-4xl dark:text-white p-2 text-center">
+                <h1 class="text-3xl font-semibold text-black capitalize lg:text-4xl  p-2 text-center">
                     spaces
                 </h1>
                 <div class="grid lg:grid-cols-2 gap-6 flex items-center justify-center">
@@ -74,19 +120,19 @@
                     </div>
                     <div class="mt-12 lg:mt-0">
                         <!-- <h1
-                            class="text-3xl font-semibold text-black capitalize lg:text-4xl dark:text-white p-2 text-center">
+                            class="text-3xl font-semibold text-black capitalize lg:text-4xl  p-2 text-center">
                             spaces
                         </h1> -->
                         <!-- <p class="text-orange-600 text-center">NON PROFIT</p> -->
                         <p
-                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base dark:text-gray-400 p-2 text-justify">
+                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base  p-2 text-justify">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat facere porro veritatis,
                             quas mollitia similique. Quasi numquam corrupti id iure, nobis dolore, amet debitis, aut eum
                             aperiam alias nemo error! </p>
 
 
                         <p
-                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base dark:text-gray-400 p-2 text-justify">
+                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base  p-2 text-justify">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta sint ullam veritatis, quam
                             inventore consectetur reprehenderit officia repudiandae maxime ratione, aperiam et ab rerum,
                             nobis itaque vitae cumque nemo illo!
@@ -94,7 +140,7 @@
 
 
                         <p
-                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base dark:text-gray-400 p-2 text-justify">
+                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base  p-2 text-justify">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestiae suscipit minus
                             aperiam qui doloribus reiciendis maxime blanditiis fuga, sunt modi ipsum maiores incidunt
                             vero earum. Quos libero voluptas saepe!
@@ -118,19 +164,19 @@
                     </div>
                     <div class="mt-12 lg:mt-0">
                         <!-- <h1
-                        class="text-3xl font-semibold text-black capitalize lg:text-4xl dark:text-white p-2 text-center">
+                        class="text-3xl font-semibold text-black capitalize lg:text-4xl  p-2 text-center">
                         spaces
                     </h1> -->
                         <!-- <p class="text-orange-600 text-center">NON PROFIT</p> -->
                         <p
-                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base dark:text-gray-400 p-2 text-justify">
+                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base  p-2 text-justify">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat facere porro veritatis,
                             quas mollitia similique. Quasi numquam corrupti id iure, nobis dolore, amet debitis, aut eum
                             aperiam alias nemo error! </p>
 
 
                         <p
-                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base dark:text-gray-400 p-2 text-justify">
+                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base  p-2 text-justify">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta sint ullam veritatis, quam
                             inventore consectetur reprehenderit officia repudiandae maxime ratione, aperiam et ab rerum,
                             nobis itaque vitae cumque nemo illo!
@@ -138,7 +184,7 @@
 
 
                         <p
-                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base dark:text-gray-400 p-2 text-justify">
+                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base  p-2 text-justify">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestiae suscipit minus
                             aperiam qui doloribus reiciendis maxime blanditiis fuga, sunt modi ipsum maiores incidunt
                             vero earum. Quos libero voluptas saepe!
@@ -160,19 +206,19 @@
                     </div>
                     <div class="mt-12 lg:mt-0">
                         <!-- <h1
-                        class="text-3xl font-semibold text-black capitalize lg:text-4xl dark:text-white p-2 text-center">
+                        class="text-3xl font-semibold text-black capitalize lg:text-4xl  p-2 text-center">
                         spaces
                     </h1> -->
                         <!-- <p class="text-orange-600 text-center">NON PROFIT</p> -->
                         <p
-                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base dark:text-gray-400 p-2 text-justify">
+                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base  p-2 text-justify">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat facere porro veritatis,
                             quas mollitia similique. Quasi numquam corrupti id iure, nobis dolore, amet debitis, aut eum
                             aperiam alias nemo error! </p>
 
 
                         <p
-                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base dark:text-gray-400 p-2 text-justify">
+                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base  p-2 text-justify">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta sint ullam veritatis, quam
                             inventore consectetur reprehenderit officia repudiandae maxime ratione, aperiam et ab rerum,
                             nobis itaque vitae cumque nemo illo!
@@ -180,7 +226,7 @@
 
 
                         <p
-                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base dark:text-gray-400 p-2 text-justify">
+                            class="max-w-2xl font-light text-black font-thin md:text-lg lg:text-base  p-2 text-justify">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestiae suscipit minus
                             aperiam qui doloribus reiciendis maxime blanditiis fuga, sunt modi ipsum maiores incidunt
                             vero earum. Quos libero voluptas saepe!
