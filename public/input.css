@@ -6,6 +6,10 @@
 .back-color{
    background: #f9f2e7;;
 }
+
+.back-color-dark{
+  background: #f3eadc;;
+}
 .support-bg{
    background-color: #d55757;;
 }
@@ -17,6 +21,10 @@
  color: #Cc6652;
 }
 
+
+.text-second{
+  color: #f9f2e7;
+ }
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
