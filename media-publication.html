@@ -20,8 +20,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400&display=swap" rel="stylesheet">
-	<!-- *************** -->
-	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -29,12 +28,9 @@
 </head>
 
 <body class="paragraphs-font bg-stone-50 font-sans leading-normal tracking-normal">
-	<!-- my code  -->
 
+	<!-- Header section Started  -->
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
-
-
 
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
@@ -59,16 +55,15 @@
 				</button>
 			</div>
 
+			<!-- Navbar link  -->
 			<nav :class="{'flex': open, 'hidden': !open}"
 				class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row gap-4 p-6 lg:p-2">
-
-				<!-- <a class="mt-2 text-sm text-black rounded-lg  md:mt-0 hover:text-red-800 focus:outline-none focus:shadow-outline hover:underline"
-					href="index.html">ABOUT US</a> -->
-
+				<!-- Dropdown link  -->
 				<div @click.away="open = false" class="relative" x-data="{ open: false }">
 					<button @click="open = !open"
 						class="text-black flex flex-row items-center w-full  text-sm text-left bg-transparent rounded-lg hover:text-red-800 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900    focus:outline-none focus:shadow-outline">
-                        <span> <a href="index.html">ABOUT US</a></span>						<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+						<span> <a href="index.html">ABOUT US</a></span> <svg fill="currentColor" viewBox="0 0 20 20"
+							:class="{'rotate-180': open, 'rotate-0': !open}"
 							class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
 							<path fill-rule="evenodd"
 								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -91,32 +86,31 @@
 						</div>
 					</div>
 				</div>
-				<!-- **** -->
-
-				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+				<!-- ******* -->
+				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
 					href="spaces.html">OUR WORK</a>
 
-				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
 					href="spaces.html">SPACES</a>
-				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
 					href="stories.html">STORIES</a>
 
-				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
 					href="media-publication.html"> MEDEA/PUBLICATIONS</a>
-				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
 					href="work-with-us.html">WORK WITH US</a>
-				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
 					href="contact.html">CONTACT US</a>
-				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800    md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline hover:underline"
+				<a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800    md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
 					href="donate.html">DONATE</a>
 
 			</nav>
-
+			<!-- Navbar link End  -->
 		</div>
 		<div class="header-color line-height"></div>
 
 	</div>
-	<!-- ****  Header End   *** -->
+	<!-- ****  Header section End   *** -->
 
 
     <!-- Main body  -->
