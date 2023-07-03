@@ -68,8 +68,7 @@
 				<div @click.away="open = false" class="relative" x-data="{ open: false }">
 					<button @click="open = !open"
 						class="text-black flex flex-row items-center w-full  text-sm text-left bg-transparent rounded-lg hover:text-red-800 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900    focus:outline-none focus:shadow-outline">
-						<span>ABOUT US</span>
-						<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+						<span> <a href="index.html">ABOUT US</a></span>						<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
 							class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
 							<path fill-rule="evenodd"
 								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -120,7 +119,6 @@
 	<!-- ****  Header End   *** -->
 
 
-	<!-- ******************* -->
 	<!-- hero Section  -->
 	<section class="flex justify-center bg-cover bg-[url('public/img/hero-img.png')]  pt-60 pb-56">
 		<div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -176,24 +174,25 @@
 
 					</div>
 				</div>
-				<div class="grid lg:grid-cols-3 gap-4 flex items-center justify-center p-2">
-					<div> <img
+				<div class="grid lg:grid-cols-3 gap-4 flex items-center justify-center gap-x-24 p-2">
+					<div class="flex flex-col justify-center items-center"> 
+						<img
 							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAhFBMVEX///8AAAAEBATLy8szMzNnZ2eXl5f5+fkNDQ0ICAhKSkqPj4/8/PwdHR3X19c8PDz19fViYmLh4eHFxcVCQkJtbW2fn58nJycWFhampqbv7++xsbEUFBTn5+eBgYG1tbV1dXWSkpJVVVUvLy8hISFNTU28vLxaWlqHh4fR0dF8fHzb29sHa/p5AAAODklEQVR4nO1dfdtyThO+SQghSlFKeq/v//0eUldhZuxI9Tueo/O/+76yDDsz57zs7r9/P/zwww8//PDDm2FFtr+ah4GqBuF85duR9e0n4iLy1SRVZlINMyVNVD/69vOJINovd8O6BGUMjfPqvyyNu5psmmR4YDOZu99+YgieOR6IS1FAHpuXbz93GZ6pcIW4Qzl63376O7Rw3FaKAk6ofVuGDJdk8ZoYORYT+8ti+OnrUhQw9l8UY+V0JUYOZf4lMfatFRwVZfUFMXpiX2OmGKPJ0lwHGdbHcz91hjIliv9hMeJDkwS60zdXNmSOrMv8mG6x69JPWmPtqFMyDJwkbHR0cdiHhRmcP+bw/SkhhHH0hb2CfQTVbPoZA+ZOUCk2yZ7r2i5niGKOPkApfWx2O+u41YDWyqgPNnz3R7GWsM2ZnV9hf/aoPmryVtriwTZ3E7x6V69fE0V5IzHeg7RqGnYx9qVGdvS3uccjNK30dVeRuF8zYee3BPka6APTdhoOwjKr7mn3BpcSQeqx6GRWPeBVDZjS4XsqcIGcoNI9nVhX4uVtx4GKDeR2pMM7LOSp8sYWvS5H70HmatnlHR5wK7qod0iIfYgjmt2NX8GxfKNBZ16+B8mx7mp0AHP9LZKcPjivbqi8um5mF6jnoy5GJlB5efrp9SFjiGY7b09EVV7f7GXi5UKhz6K1m4p6qzAIwtWp0WXb5dk1fTFCsYBYQZLa5W16R+PpNU8PAf06/LJrfHESgNFgGwWxE2CKOir1Yeav3/UPASTHgv+V/d3zLOn5c3OkXKm0nhCDVfyJ2l6OE1goCLjDeLvS9Urxv1F4yIfXj/icKV8ntzbCERieb5hBgnWsvA7lcQNzeP1Cgg8wbGtj4AQ1083GtZqD8vRXzcwchnzELu6VQzmjnRyggpQeQwC9ujstjxDnryvFpldSvrQVL7rA2USe6d0Dg1RfRZBNPQfRebc8uQYtohMLTphMeXJA1qL2TU+ZpiiIId5XruVH8WtQDp4NBGkzMDm9LJgaI7OrbLkkVJ0wePDE0jnZgBiim6CWxdkM6sODnMoXD7ikawc+gzRhDGEhNVLIXNiZ8UISGRXbOebJMYefQeLQ6SMyBmj3VtnXhlMZduVyVuJGQwoHHNvrYf0D8CCZod3BA1Umx5bDHk3kGTh2HJmcmCD5u4NzpNXZwQhOY6QgJTPooo/JgX3WbHJtwD9YFZuhizOVBH4CFkVAPwg6P8eYtz1XBhC2ODE2uxl6VlVRAUH2mEmqWGBJFk1wYrW1AcOJYB+VEOTfRpJgL1H1R4IxlocVwhGrAoJoPkMFWWOKXK0DCH4S9GUyIqoeLgcuSIz9LawOIaQlEVZD59gszBmSgvxTJAm0SF51CF3kUTAfwiIHYPKlUZAEs1u1dyvAHS10dnOIJ0wXmwTJXN8Z/EMtuTZrdu8Yy2LxrIiQgxDkksWK4B9GtUGa4zvUkenicpC6TghiyYhzr6tco2+O0SYkTmy4aidINiNn4P+r9VGaLDBubrYMQWr2UlCQqTQQHa+JOuKNP/AtYASS5PQxJCqKzNCA4wFfuGGCVGnNMxhBZkBV5kgFksFLICpN254q0XwGIxE0p4w1KQhsUqBLYEN9B9FSxgloMiKbtBME1kToi5Bz60Ld4yAuyIWyj6QgDngJaAWpZB1KT/B7gMgcAv7CSEFghg5mb6n6OEWRWJmHbIqivI4UBH468AUTPtElF07AThfGiLANpCBwDQQM9Yg4bw/9/g8c1x6imUNaEB0mg/BMwQscy84EyWKkBUZQKUFgzvgPbgjFzSipIqyphadEaEHg9IYL/xhVEovsr+ZYrYKk8AVBcuRIjkzHagwUP5GISQ/BXWCKSwmCxOJr5OcYS4FrbX/gNX0u0U+CC4JlR7AVBViejchFSeziYZ7DgNMuuCBYvgpr/k6Q39O6zq1yZ05sBuZEUEGwpG4tiXIHpu1UxgAzjDisjSSNIXVEBcE4BxAfFhjCv0eMXIEBv6E0L5JDXBsTxMGMEL4gDTZypNGi2T+MnCEBxVNEkAX2qgivABNgPBGUfcRWLdH5q6wrPCyIjBIOgjjBhnRNCNKu41rLy6G1UBEWBE8sE8YUrqARFzBLqX9w866DQ+VrgoIQwQW6rgyzv/V03h1y675uNzfp07LlBgSRiUQ/Rc1gx4MXy5K2cmSaeg0lRs8eov5kC6rjiHLTcMUGXSHZTtPvCHOjM5g8RKkJ4pCmnZhZCAlCMygvrq3wrn5ANsIIFEQ3yUYZvDosYSES5tjbavoDq6IsICtJ4HtR6dHkfkOxGV8sKGGuHVmX3l7Tn0WB+1L0SRNhcMkYaQFeg1ySdCBHBu+oVBL9eho2Kx8dWsB5Sbig8JqmlxDNlwdluJBlfeuMTKGVsBql6lhiHf5tx6uomCAzhhKSuwe/yOua/gqQ9reGLwJl5+QO1ju0B9JX+YC4snM65roHHXtLmPkF/EiLNvgO0ZAMkTCHCBgIdk9nlyALkQXghAiw5KXzdZkMqNQmFzfAXKueROEUcjuGRRUB/wCnUeppMCRL8QFEdGrqDjgeAejZt4zvvnGvsQJwSgTwoljH+nsR4bFqBXBgCWVRNp/fZclSxbeHgiNLMDiWG4l2xwipCnkVcA8D0psk78KPuUUrYGxilwEh0OgnldOP7E0UHwV1/A64lehaLkORvlvtrVUq4AHLwKg5GR63XKglBlfz22wAlyDDoen7KzrdsuAZnrpzLDJZggEL+shK/isLM3HEYT+zUtOY7rnDgDVeaWTjQ9dbI0R781Aod75nSGPoAQDvsiQDMvbKVlwEP0h2j6Ch7+ILPUjgYTj5Wl62wJHth2aSKmW1vu4K5rbaXjBBb0WVevBuHxr7/ijdjZXpAjSu0yDPl4K74DQDT327lCVvtzCe+sizfvEooly3ggHxRNSbacW5NNUAZ7/ujNRbjOA1bjCIgPJsVHtQ281JLDtc9nfOZrqdTjeOcUjM0H+E0PGEvbnuHdTKNcqTdGe1HvAPbFryANm+S6Rala63ELGXHMZeA51QoHRz2CEFtoNR6Z21UHc6d0hRHs4SqwKX4e4c9ko5JdderSdOzQCs+VOsgfsRr4bPGm+pQnm2ccaGMXY2W8yBB+x9g5saE/F0EpwwJiGcRJDU5vRoBU1JULwXu0WSS3xD4BObxje6Ndwn8vchEmaC54ZO3Tqa6zb4N2Z3bMWiT5XQ6/0gNHs1DW8/424ORgdqfxhkIZvLTTsIODUie8y0WySZ/oOScy4u3xKpd+DLxTgLL3IIFDgyHp/9UBM3bwWEVoYSRhPtGEagNnAQ2ZjnIyJ71hIQqwgSq2HY2fn9CFW56ajIYGq1HUwbIbqgHZ+wbYruJ7U/3j64eubmjdEy7N0SflZAtwSAEJ3i+O4A7VNCbnyxT/YlLicsI26StHgXwiUC9JN0mtvS5mm7oEq8SR/d0oQXXBGlVK1n7p5Vg0N+GbtwoGEJSxBtsDCSwK/cVrNX9w3onl8yQxCOX46QlDJro667P5SHynh3GI0OqeFMkYEZ5R1euxLCuFgkhXMYhirOtZi5A9hHcfZKbOpQKmEuzH7RDnoEJ1D9GGtI5hz93WiCBLPF5m0gd2RsxMGhT9NYiJfl4HfHaGBZUry2cBH3EXlZQazToc0edPDkYvQ9ib7j6ykKYoy/ZR8cmD91mozfQ9JQiAw6eZDjC36+NqtYsD3kNkR0ZZ3MsfxY03Fpni/FoU+BoBzgSicBILv6GfUGAiu29+pkfP0E26e/+gfiEWWnOB0tFs1pwWvPRIAa963RP5trVTWPST8dV9x16RgBdz6p8ZHskZyRuS8mqbsUDUfa7y7Lz23cHrOyYsi67ENzmUwmk+R8VOe+98gcxEvx+vpL1diWRZhUyLpYe2rm1cZ8RQ54b28RKMcGFxytJqyg6tXWMXC3dTEMD2sfvLt2CqpHWTbat+3LfaL2a6cEZmbhGKz808W72La/Co59Ywp42pBclZo54g4O7BF1ViXozEyVSnc+6J00wqzYRRh9GRHbG0IIyV4UuaNjh1iMPIMREyueQQxiisbLnS394ElSpAFZ6aqQYo2DDg98nDP05FZqpJu/SsjfOK5T3Z2jkgPapBvBzRfCpzJAyKvFPfSb6x2f+gae0gPi7jpcMUnkfkYyPdRbdXlCTwHw/CcIf3fGDrgr4Upmeqgc0zcc+BYJHgP8lOa4jGjdmp5zHm+BR69dYbyl49gSTAc+H28VqQYsi7w5rAs2tsJ7lifvOtBdMJIrHzhm9YIkdaYzfSAP9NlUMUZndXW5PyJxNK/8lnbQAtVjvxCInl8amcR427d2f0eCAcqi33h6aBzuKGMwenfrdyhqh/WdCbP4vBctGJW+hV4ddPGB45tjYU+Xq3R6DvZ2fNMILbb3wfmg1FWtkjQff2aVWlPwcJWg8m99sdAJU1FSvsU7mvVARA2GWO57wnnGAr2neGTyyVWc5BHajs1ImF6hu+u/iz+9QG2O8vSrGyO3rqxhfq+mDD82qx7QVJgh3YrggoQmR07jr2Z9qL79DDlxUeSbwUGO+AEwy4j6Rf6eGFdRwlre66/XEDzWEkB+oK2rSNMvinHFvuKfH1tG2iIr2Jw8boqd9DMnmdOIjyUv/UjRamaDw9EPVz5lN5zD90H4k8cjP+dutDBFzwVQJvN7Y813HhqGtZ/cv0v5xDPNN0fO8DH9BkPF6B/n9pc1gsRlfVtj4dQTg5Fnn+rdQf9hnNTDJnv9RvDV3SI6gnYKzqliJKv/B2EyuF7P+y9rwg8//PDDDz/88F/F/wA4e9DLnIRo2wAAAABJRU5ErkJggg=="
 							alt="">
-						<h3 class="heading-font-family font-bold text-lg text-color pt-2">Lack of understanding of
+						<h3 class="heading-font-family font-bold text-lg text-color pt-2 text-center">Lack of understanding of
 							rights</h3>
 					</div>
-					<div> <img
+					<div class="flex flex-col justify-center items-center"> 
+						<img
 							src="data:image/png;base64,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"
 							alt="">
-						<h3 class="heading-font-family font-bold text-lg text-color pt-2">Lack of understanding of
-							rights</h3>
+						<h3 class="heading-font-family font-bold text-lg text-color pt-2 text-center">Inability to exercise and enforce their right</h3>
 					</div>
-					<div> <img
+					<div class="flex flex-col justify-center items-center">  
+						<img
 							src="data:image/png;base64,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"
 							alt="">
-						<h3 class="heading-font-family font-bold text-lg text-color pt-2">Lack of understanding of
-							rights</h3>
+						<h3 class="heading-font-family font-bold text-lg text-color pt-2 text-center">Failure of the state to deliver justice</h3>
 					</div>
 
 				</div>
@@ -389,7 +388,7 @@
 	</section>
 	<!-- *****************-->
 
-	<div class="back-color py-20 md:py-6 sm:py-4">
+	<!-- <section class="back-color py-20 md:py-6 sm:py-4">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<div class="mx-auto max-w-6xl">
 				<h1 class="heading-font-family lg:text-4xl font-bold text-color capitalize  p-2 text-lg text-center">
@@ -408,16 +407,13 @@
 			<ul role="list"
 				class="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 
-				<!--   1 Team -->
 				<li class="flex justify-center bg-white flex-col rounded-lg drop-shadow-lg hover:drop-shadow-2xl ">
 					<div><img class="aspect-[3/2] rounded object-cover p-4 "
 							src="https://www.kineosystem.com/wp-content/uploads/2016/08/dummy-prod-1.jpg"
 							alt="Mission Thalassemia img">
 					</div>
 
-					<!-- <h2 class="p-4 font-bold text-2lg text-center tracking-tight text-black sm:text-lg">the story
-						of hope
-					</h2> -->
+					
 
 					<h1 class="lg:text-3xl font-bold text-color capitalize  p-2 text-lg text-center">
 						the story of hope </h1>
@@ -430,17 +426,13 @@
 
 				</li>
 
-				<!-- 2 Team -->
 				<li class="flex justify-center bg-white flex-col rounded-lg drop-shadow-lg hover:drop-shadow-2xl ">
 					<div><img class="aspect-[3/2] rounded object-cover p-4 "
 							src="https://www.kineosystem.com/wp-content/uploads/2016/08/dummy-prod-1.jpg"
 							alt="Mission Thalassemia img">
 					</div>
 
-					<!-- <h2 class="p-4 font-bold text-lg text-center tracking-tight text-black sm:text-lg">how we cope
-						with water
-						scarcity
-					</h2> -->
+					
 
 					<h1 class="lg:text-3xl font-bold text-color capitalize  p-2 text-lg text-center">
 						how we cope with water scarcity</h1>
@@ -457,8 +449,6 @@
 				</li>
 
 
-				<!-- 3 Team -->
-
 				<li class="flex bg-white flex-col rounded-lg drop-shadow-2xl hover:drop-shadow-2xl ">
 					<div><img class="aspect-[3/2] rounded object-cover p-4 "
 							src="https://www.kineosystem.com/wp-content/uploads/2016/08/dummy-prod-1.jpg" alt="Economic Development
@@ -466,9 +456,7 @@
 					</div>
 
 
-					<!-- <h2 class="p-4 font-bold text-lg text-center tracking-tight text-black sm:text-lg">what is
-						education to me
-					</h2> -->
+					
 
 					<h1 class="lg:text-3xl font-bold text-color capitalize  p-2 text-lg text-center">
 						what is education to me
@@ -483,10 +471,9 @@
 
 				</li>
 
-				<!-- ************** -->
 			</ul>
 		</div>
-	</div>
+	</section> -->
 	<!-- Program section  End -->
 
 	<section class="">
@@ -497,9 +484,7 @@
 				<div class="grid lg:grid-cols-2 gap-6 flex items-center justify-center">
 
 					<div class="mt-4 lg:mt-0">
-						<!-- <h1 class="text-3xl font-semibold text-black capitalize lg:text-3xl  p-2">
-							support our work
-						</h1> -->
+					
 						<h1 class="lg:text-5xl font-bold text-white capitalize  p-2 text-lg">
 							support our work
 						</h1>
