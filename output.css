@@ -727,6 +727,10 @@ video {
   width: 1rem;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -753,6 +757,10 @@ video {
 
 .max-w-2xl {
   max-width: 42rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .max-w-4xl {
@@ -1017,8 +1025,8 @@ video {
   background-image: url('public/img/Access.png');
 }
 
-.bg-\[url\(\'public\/img\/hero-section-img\.png\'\)\] {
-  background-image: url('public/img/hero-section-img.png');
+.bg-\[url\(\'public\/img\/hero-img\.png\'\)\] {
+  background-image: url('public/img/hero-img.png');
 }
 
 .bg-gradient-to-tr {
@@ -1361,6 +1369,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.text-red-800 {
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1561,10 +1579,6 @@ video {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-.font-style-second{
-  font-family: 'Nunito Sans', sans-serif;
-}
-
 .line-height{
   height: 12px;
 }
@@ -1578,17 +1592,20 @@ video {
   width: 295px;
 }
 
-/* 
-.Malanpur-Labour{
-  background-color: #Cc6652;
-  width: 468px;
+/*    03/07/2023  Css     */
 
-} */
+.heading-font-family{
+  font-family: 'Poppins', sans-serif;
+}
 
-/* .first-div{
-  top: -680px;
-  left: 9px;
-} */
+.paragraphs-font{
+  font-family: 'Public Sans', sans-serif;
+}
+
+.logo-size{
+  width: 45%;
+  /* height: 60px; */
+}
 
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
@@ -1923,6 +1940,10 @@ video {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:w-36 {
+    width: 9rem;
   }
 
   .md\:w-48 {

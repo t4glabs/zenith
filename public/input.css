@@ -82,9 +82,6 @@
 }
 
 
-.font-style-second{
-  font-family: 'Nunito Sans', sans-serif;
-}
 
 
 .line-height{
@@ -102,15 +99,19 @@
     width: 295px;
 }
 
-/* 
-.Malanpur-Labour{
-  background-color: #Cc6652;
-  width: 468px;
-
-} */
+  /*    03/07/2023  Css     */
 
 
-/* .first-div{
-  top: -680px;
-  left: 9px;
-} */
+  .heading-font-family{
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+.paragraphs-font{
+    font-family: 'Public Sans', sans-serif;
+  }
+
+.logo-size{
+  width: 45%;
+  /* height: 60px; */
+}
