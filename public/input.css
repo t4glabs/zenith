@@ -3,26 +3,28 @@
 @tailwind utilities;
 
 
-.back-color{
-   background: #f9f2e7;;
+.back-color {
+  background: #f9f2e7;
+  ;
 }
 
-.back-color-dark{
-  background: #f3eadc;;
+.back-color-dark {
+  background: #f3eadc;
+  ;
 }
 
-.header-color{
+.header-color {
   background-color: #Cc6652;
 }
 
-.text-color{
- color: #Cc6652;
+.text-color {
+  color: #Cc6652;
 }
 
 
-.text-second{
+.text-second {
   color: #f9f2e7;
- }
+}
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
@@ -31,7 +33,8 @@
   height: 364px;
 
   /* border: 1px solid #f1f1f1; */
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
@@ -50,12 +53,14 @@
 }
 
 /* Position the front and back side */
-.flip-box-front, .flip-box-back {
+.flip-box-front,
+.flip-box-back {
   position: absolute;
   width: 100%;
 
   /* height: 100%; */
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
+  /* Safari */
   backface-visibility: hidden;
 }
 
@@ -75,81 +80,85 @@
 
 /* font style  */
 
-.font-style{
+.font-style {
   font-family: 'Nunito Sans', sans-serif;
 }
 
 
 
 
-.line-height{
+.line-height {
   height: 12px;
 }
 
 
-.img-size{
+.img-size {
   height: 700px;
 
 }
 
-.approch-img-size{
+.approch-img-size {
   height: 203px;
-    width: 295px;
+  width: 295px;
 }
 
-  /*    03/07/2023  Css     */
+/*    03/07/2023  Css     */
 
 
-  .heading-font-family{
-    font-family: 'Poppins', sans-serif;
-  }
+.heading-font-family {
+  font-family: 'Poppins', sans-serif;
+}
 
 
-.paragraphs-font{
-    font-family: 'Public Sans', sans-serif;
-  }
+.paragraphs-font {
+  font-family: 'Public Sans', sans-serif;
+}
 
-.logo-size{
+.logo-size {
   width: 45%;
   /* height: 60px; */
 }
 
 
-.approach-div{
+.approach-div {
   height: 441px;
 
 }
 
-.icon-size{
+.icon-size {
   border-radius: 50%;
   width: 50%;
 }
 
-.icon-size-second{
+.icon-size-second {
   border-radius: 50%;
   width: 50%;
 }
 
- .hand-icon{
+.hand-icon {
   width: 65%;
-} 
-
-.power-of-Spaces{
-width: 410px;
 }
 
-.power-of-Spaces-2{
+.power-of-Spaces {
+  width: 410px;
+}
+
+.power-of-Spaces-2 {
   width: 408px;
   height: 300px;
+}
+
+@media only screen and (max-width: 550px) {
+  .power-of-Spaces {
+    width: 300px;
   }
 
-  @media only screen and (max-width: 550px) {
-    .power-of-Spaces{
-      width: 300px;
-      }
-      
-      .power-of-Spaces-2{
-        width: 300px;
-        height: 300px;
-        }
+  .power-of-Spaces-2 {
+    width: 300px;
+    height: 300px;
   }
+}
+
+.anil-divan{
+  height: 123px;
+}
