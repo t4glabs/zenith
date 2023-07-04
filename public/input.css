@@ -10,9 +10,7 @@
 .back-color-dark{
   background: #f3eadc;;
 }
-.support-bg{
-   background-color: #d55757;;
-}
+
 .header-color{
   background-color: #Cc6652;
 }
@@ -135,3 +133,23 @@
  .hand-icon{
   width: 65%;
 } 
+
+.power-of-Spaces{
+width: 410px;
+}
+
+.power-of-Spaces-2{
+  width: 408px;
+  height: 300px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    .power-of-Spaces{
+      width: 300px;
+      }
+      
+      .power-of-Spaces-2{
+        width: 300px;
+        height: 300px;
+        }
+  }
