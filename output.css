@@ -759,6 +759,14 @@ video {
   max-width: 48rem;
 }
 
+.max-w-4xl {
+  max-width: 56rem;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -1094,11 +1102,6 @@ video {
   padding-right: 6rem;
 }
 
-.px-28 {
-  padding-left: 7rem;
-  padding-right: 7rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1142,11 +1145,6 @@ video {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .py-2 {
@@ -1614,7 +1612,7 @@ video {
 }
 
 .approach-div {
-  height: 441px;
+  height: 400px;
 }
 
 .icon-size {
@@ -1653,6 +1651,10 @@ video {
 
 .anil-divan{
   height: 123px;
+}
+
+.justice-enablers{
+  width: 500px;
 }
 
 .placeholder\:text-gray-400::-moz-placeholder {
@@ -2063,10 +2065,6 @@ video {
     width: 50%;
   }
 
-  .lg\:w-auto {
-    width: auto;
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2116,14 +2114,14 @@ video {
     padding-right: 3rem;
   }
 
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .lg\:px-28 {
     padding-left: 7rem;
     padding-right: 7rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .lg\:py-16 {
