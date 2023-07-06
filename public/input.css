@@ -153,6 +153,10 @@
     width: 300px;
   }
 
+  .what-section{
+    display: flex;
+    flex-direction: column-reverse;
+  }
   
 }
 
