@@ -759,6 +759,14 @@ video {
   width: 100%;
 }
 
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -859,10 +867,6 @@ video {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1029,10 +1033,6 @@ video {
   background-color: rgb(255 255 255 / 0.05);
 }
 
-.bg-\[url\(\'public\/img\/Access\.png\'\)\] {
-  background-image: url('public/img/Access.png');
-}
-
 .bg-\[url\(\'public\/img\/hero-img\.png\'\)\] {
   background-image: url('public/img/hero-img.png');
 }
@@ -1191,6 +1191,10 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
 .text-left {
@@ -1649,7 +1653,7 @@ video {
   width: 500px;
 }
 
-.photo{
+.img-size-our-story{
   height: 600px;
 }
 
@@ -2124,11 +2128,6 @@ video {
     padding-right: 4rem;
   }
 
-  .lg\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -2137,6 +2136,11 @@ video {
   .lg\:px-1 {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+  }
+
+  .lg\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   .lg\:pt-24 {
