@@ -609,6 +609,11 @@ video {
   margin: 2rem;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -715,6 +720,10 @@ video {
   aspect-ratio: 3/2;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -733,6 +742,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .w-4 {
@@ -757,14 +770,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-4\/5 {
-  width: 80%;
-}
-
-.w-11\/12 {
-  width: 91.666667%;
 }
 
 .min-w-0 {
@@ -1076,6 +1081,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1185,16 +1194,16 @@ video {
   padding-top: 1rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .pt-60 {
   padding-top: 15rem;
 }
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
 }
 
 .text-left {
@@ -1460,6 +1469,11 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .drop-shadow-md {
   --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1639,21 +1653,21 @@ video {
     width: 300px;
   }
 
-  .what-section{
+  .what-section {
     display: flex;
     flex-direction: column-reverse;
   }
 }
 
-.anil-divan{
+.anil-divan {
   height: 123px;
 }
 
-.justice-enablers{
+.justice-enablers {
   width: 500px;
 }
 
-.img-size-our-story{
+.img-size-our-story {
   height: 600px;
 }
 
@@ -2128,19 +2142,14 @@ video {
     padding-right: 4rem;
   }
 
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .lg\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
   .lg\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .lg\:pt-24 {
@@ -2225,3 +2234,5 @@ video {
     line-height: 1;
   }
 }
+
+

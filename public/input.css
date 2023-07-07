@@ -153,22 +153,24 @@
     width: 300px;
   }
 
-  .what-section{
+  .what-section {
     display: flex;
     flex-direction: column-reverse;
   }
-  
+
 }
 
-.anil-divan{
+.anil-divan {
   height: 123px;
 }
 
-.justice-enablers{
+.justice-enablers {
   width: 500px;
 }
 
 
-.img-size-our-story{
+.img-size-our-story {
   height: 600px;
 }
+
+
