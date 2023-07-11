@@ -174,7 +174,11 @@
 }
 
 .pro-one:hover .image-one {
-  opacity: 0.3;
+  opacity: 0.4;
+}
+
+.image-one :hover .text-head {
+  opacity: 1;
 }
 
 .text-head {
@@ -265,4 +269,37 @@
 
 .carousel-card:nth-child(5) {
   animation-delay: 8s;
+}
+
+/* programme page */
+.programme-bg {
+  background-color: RGB(140, 42, 41);
+}
+
+.programme-bg p {
+  color: RGB(237, 233, 223);
+}
+
+.programme-bg ul li {
+  color: RGB(237, 233, 223);
+}
+
+.access-to-justice-bg {
+  background-color: RGB(204, 101, 82);
+}
+
+.access-to-justice-bg {
+  color: RGB(237, 233, 223);
+}
+
+.CLE-bg {
+  background-color: RGB(237, 233, 223);
+}
+
+.CLE-bg {
+  color: RGB(204, 101, 82);
+}
+
+.programme-one {
+  color: RGB(237, 233, 223);
 }
