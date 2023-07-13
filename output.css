@@ -738,6 +738,10 @@ video {
   height: 5rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -1246,6 +1250,10 @@ video {
 
 .pt-60 {
   padding-top: 15rem;
+}
+
+.pt-72 {
+  padding-top: 18rem;
 }
 
 .pt-8 {
