@@ -301,3 +301,8 @@ img:nth-child(5) {
 .programme-one {
   color: RGB(237, 233, 223);
 }
+
+/* get involved */
+.apply-link:hover,.apply-link:active{
+  text-decoration: underline;
+}
