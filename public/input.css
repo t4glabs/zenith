@@ -174,7 +174,11 @@
 }
 
 .pro-one:hover .image-one {
-  opacity: 0.4;
+  opacity: 0.3;
+}
+
+.pro-one:hover .text-head {
+  opacity: 1;
 }
 
 .image-one :hover .text-head {
@@ -192,16 +196,18 @@
   text-align: center;
 }
 
-.pro-one:hover .text-head {
-  opacity: 1;
-}
-
 
 
 /* spaces carousel */
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+} */
+
 .pic-ctn {
   width: 100vw;
-  height: 100vh;
+  height: 200px;
 }
 
 @keyframes display {
@@ -233,40 +239,34 @@
 
 .pic-ctn {
   position: relative;
-  display: block;
   width: 100vw;
-  height: 100vh;
+  height: 300px;
+  margin-top: 15vh;
 }
 
-.pic-ctn>.carousel-card {
+.pic-ctn>img {
   position: absolute;
   top: 0;
-  left: calc(40% - 100px);
+  left: calc(50% - 100px);
   opacity: 0;
   animation: display 10s infinite;
-  width: 100vw;
-  height: 100vh;
 }
 
-
-.carousel-card:nth-child(2) {
+img:nth-child(2) {
   animation-delay: 2s;
 }
 
-.carousel-card:nth-child(3) {
+img:nth-child(3) {
   animation-delay: 4s;
 }
 
-.carousel-card:nth-child(4) {
+img:nth-child(4) {
   animation-delay: 6s;
 }
 
-.carousel-card:nth-child(5) {
+img:nth-child(5) {
   animation-delay: 8s;
 }
-
-
-
 
 
 /* programme page */
