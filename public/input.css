@@ -303,6 +303,66 @@ img:nth-child(5) {
 }
 
 /* get involved */
-.apply-link:hover,.apply-link:active{
+.apply-link:hover,
+.apply-link:active {
   text-decoration: underline;
+}
+
+
+
+
+/* footer */
+.news-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.item-image {
+  margin-right: 10px;
+}
+
+.item-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.item-date {
+  color: gray;
+}
+
+.divider {
+  width: 90%;
+  height: 1px;
+  background-color: gray;
+  margin: 10px 0;
+}
+
+
+/* instagram grid */
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.instagram-grid .mkd-instagram-item-holder {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.insta-img {
+  width: 100%;
+  height: auto;
+}
+
+.instagram-grid img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
