@@ -372,3 +372,8 @@ img:nth-child(5) {
   height: 100%;
   object-fit: cover;
 }
+
+
+.subcribe-btn:hover {
+  background-color: #1f9d4b;
+}

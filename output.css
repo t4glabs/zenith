@@ -1070,6 +1070,21 @@ video {
   background-color: rgb(255 255 255 / 0.05);
 }
 
+.bg-orange-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(154 52 18 / var(--tw-bg-opacity));
+}
+
+.bg-orange-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(194 65 12 / var(--tw-bg-opacity));
+}
+
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'public\/img\/hero-img\.png\'\)\] {
   background-image: url('public/img/hero-img.png');
 }
@@ -1912,6 +1927,10 @@ img:nth-child(5) {
      object-fit: cover;
 }
 
+.subcribe-btn:hover {
+  background-color: #1f9d4b;
+}
+
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -1955,6 +1974,21 @@ img:nth-child(5) {
 .hover\:bg-red-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-orange-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(124 45 18 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-orange-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(154 52 18 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-orange-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(194 65 12 / var(--tw-bg-opacity));
 }
 
 .hover\:text-black:hover {
