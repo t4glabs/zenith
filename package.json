@@ -19,5 +19,8 @@
   "homepage": "https://github.com/t4glabs/bastar-se-bazaar#readme",
   "devDependencies": {
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2"
   }
 }
