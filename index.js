@@ -119,18 +119,6 @@ function easy_background(selector, sld_args) {
 
 }
 
-// easy_background(".hero",
-
-//   {
-//     slide: ["public/img/Partners-Img/Azim_Premji_University_logo..webp",
-//       "public/img/Partners-Img/Azim_Premji_University_logo..webp",
-//       "public/img/Partners-Img/Azim_Premji_University_logo..webp",
-//       "public/img/Partners-Img/Azim_Premji_University_logo..webp"],
-
-//     delay: [3000, 3000, 3000, 20000]
-//   }
-
-// );
 
 
 //Javascript to toggle the menu
