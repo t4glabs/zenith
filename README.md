@@ -1,11 +1,11 @@
-# bastar-se-bazaar
+# zenith website (zenithsociety.in)
 Website for Bastar Se Bazaar Tak
 
 ## Development
 
-`git clone https://github.com/t4glabs/bastar-se-bazaar`
+`git clone https://github.com/t4glabs/zenith`
 
-`cd bastar-se-bazaar`
+`cd zenith`
 
 `npm install`
 
