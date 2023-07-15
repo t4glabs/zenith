@@ -1656,11 +1656,17 @@ video {
 
 /*    03/07/2023  Css     */
 
-.heading-font-family {
+.heading-font-family,
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Poppins', sans-serif;
 }
 
-.paragraphs-font {
+.paragraphs-font,
+p {
   font-family: 'Public Sans', sans-serif;
 }
 
