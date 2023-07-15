@@ -619,11 +619,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.my-48 {
-  margin-top: 12rem;
-  margin-bottom: 12rem;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -763,10 +758,6 @@ video {
 
 .w-16 {
   width: 4rem;
-}
-
-.w-2\/4 {
-  width: 50%;
 }
 
 .w-3\/4 {
@@ -1027,11 +1018,6 @@ video {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
-.bg-indigo-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(129 140 248 / var(--tw-bg-opacity));
-}
-
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
@@ -1070,6 +1056,14 @@ video {
   background-color: rgb(255 255 255 / 0.05);
 }
 
+<<<<<<< HEAD
+.bg-\[url\(\'public\/img\/CLE\/CLE-cover\.png\'\)\] {
+  background-image: url('public/img/CLE/CLE-cover.png');
+}
+
+.bg-\[url\(\'public\/img\/access-to-justice\/Access-cover\.JPG\'\)\] {
+  background-image: url('public/img/access-to-justice/Access-cover.JPG');
+=======
 .bg-orange-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(154 52 18 / var(--tw-bg-opacity));
@@ -1083,6 +1077,7 @@ video {
 .bg-red-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+>>>>>>> 72ce4600599fa51b48718f586c5ec34c0557b9ea
 }
 
 .bg-\[url\(\'public\/img\/hero-img\.png\'\)\] {
@@ -1193,11 +1188,6 @@ video {
   padding-bottom: 0.625rem;
 }
 
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -1211,11 +1201,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .py-8 {
@@ -1257,10 +1242,6 @@ video {
 
 .pt-40 {
   padding-top: 10rem;
-}
-
-.pt-44 {
-  padding-top: 11rem;
 }
 
 .pt-6 {
@@ -2303,10 +2284,6 @@ img:nth-child(5) {
     flex-direction: row;
   }
 
-  .md\:flex-wrap {
-    flex-wrap: wrap;
-  }
-
   .md\:items-center {
     align-items: center;
   }
@@ -2467,11 +2444,6 @@ img:nth-child(5) {
     padding-bottom: 3rem;
   }
 
-  .lg\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
-
   .lg\:pt-24 {
     padding-top: 6rem;
   }
@@ -2482,14 +2454,6 @@ img:nth-child(5) {
 
   .lg\:pt-4 {
     padding-top: 1rem;
-  }
-
-  .lg\:pt-52 {
-    padding-top: 13rem;
-  }
-
-  .lg\:pt-60 {
-    padding-top: 15rem;
   }
 
   .lg\:pt-72 {
