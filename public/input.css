@@ -372,3 +372,17 @@ img:nth-child(5) {
 .subcribe-btn:hover {
   background-color: #1f9d4b;
 }
+
+
+
+/* team */
+.team-name {
+  position: absolute;
+  top: 50%;
+  left: 36%;
+  display: none;
+}
+
+.team-card:hover .team-name {
+  display: block;
+}

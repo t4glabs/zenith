@@ -1913,6 +1913,19 @@ img:nth-child(5) {
   background-color: #1f9d4b;
 }
 
+/* team */
+
+.team-name {
+  position: absolute;
+  top: 50%;
+  left: 36%;
+  display: none;
+}
+
+.team-card:hover .team-name {
+  display: block;
+}
+
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
