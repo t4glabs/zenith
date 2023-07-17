@@ -105,12 +105,18 @@
 /*    03/07/2023  Css     */
 
 
-.heading-font-family {
+.heading-font-family,
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Poppins', sans-serif;
 }
 
 
-.paragraphs-font {
+.paragraphs-font,
+p {
   font-family: 'Public Sans', sans-serif;
 }
 
@@ -174,7 +180,11 @@
 }
 
 .pro-one:hover .image-one {
-  opacity: 0.4;
+  opacity: 0.3;
+}
+
+.pro-one:hover .text-head {
+  opacity: 1;
 }
 
 .image-one :hover .text-head {
@@ -192,16 +202,18 @@
   text-align: center;
 }
 
-.pro-one:hover .text-head {
-  opacity: 1;
-}
-
 
 
 /* spaces carousel */
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+} */
+
 .pic-ctn {
   width: 100vw;
-  height: 100vh;
+  height: 200px;
 }
 
 @keyframes display {
@@ -233,40 +245,34 @@
 
 .pic-ctn {
   position: relative;
-  display: block;
   width: 100vw;
-  height: 100vh;
+  height: 300px;
+  margin-top: 15vh;
 }
 
-.pic-ctn>.carousel-card {
+.pic-ctn>img {
   position: absolute;
   top: 0;
-  left: calc(40% - 100px);
+  left: calc(50% - 100px);
   opacity: 0;
   animation: display 10s infinite;
-  width: 100vw;
-  height: 100vh;
 }
 
-
-.carousel-card:nth-child(2) {
+img:nth-child(2) {
   animation-delay: 2s;
 }
 
-.carousel-card:nth-child(3) {
+img:nth-child(3) {
   animation-delay: 4s;
 }
 
-.carousel-card:nth-child(4) {
+img:nth-child(4) {
   animation-delay: 6s;
 }
 
-.carousel-card:nth-child(5) {
+img:nth-child(5) {
   animation-delay: 8s;
 }
-
-
-
 
 
 /* programme page */
@@ -300,4 +306,69 @@
 
 .programme-one {
   color: RGB(237, 233, 223);
+}
+
+/* get involved */
+.apply-link:hover,
+.apply-link:active {
+  text-decoration: underline;
+}
+
+
+
+
+/* footer */
+.news-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.item-image {
+  margin-right: 10px;
+}
+
+.item-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.item-date {
+  color: gray;
+}
+
+.divider {
+  width: 90%;
+  height: 1px;
+  background-color: gray;
+  margin: 10px 0;
+}
+
+
+/* instagram grid */
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.instagram-grid .mkd-instagram-item-holder {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.insta-img {
+  width: 100%;
+  height: auto;
+}
+
+.instagram-grid img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
