@@ -205,11 +205,11 @@ p {
 
 
 /* spaces carousel */
-
+/* 
 .pic-ctn {
   width: 100vw;
   height: 200px;
-}
+} */
 
 @keyframes display {
   0% {
@@ -240,7 +240,7 @@ p {
 
 .pic-ctn {
   position: relative;
-  width: 100vw;
+  width: 90vw;
   height: 300px;
   margin-top: 15vh;
 }
@@ -248,7 +248,7 @@ p {
 .pic-ctn>img {
   position: absolute;
   top: 0;
-  left: calc(50% - 100px);
+  left: calc(42% - 100px);
   opacity: 0;
   animation: display 10s infinite;
 }
