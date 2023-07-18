@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '112': '28rem',
+        '88': '22rem',
+      }
+    },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
 };
