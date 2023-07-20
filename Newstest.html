@@ -1,0 +1,599 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith</title>
+    <link href="output.css" rel="stylesheet">
+
+
+
+    <!-- font for heading  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+
+    <!-- font for paragraphs  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+</head>
+
+<body class="paragraphs-font bg-stone-50 font-sans leading-normal tracking-normal text-gray-700 text-base">
+
+    <!-- Header section Started  -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <div class="w-full text-gray-300 bg-white drop-shadow-md">
+        <div x-data="{ open: false }"
+            class="p-4 flex flex-col max-w-screen-xl  mx-auto md:items-center md:justify-between md:flex-row gap-8 px-8">
+
+            <div class="flex flex-row items-center justify-between">
+
+                <a href="index.html"><img src="public/img/logo.png" alt="logo" class="h-full w-44"></a>
+
+                <button aria-label="hamberger-btn" class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+                    @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-800">
+                        <path x-show="!open" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navbar link  -->
+            <nav :class="{'flex': open, 'hidden': !open}"
+                class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row gap-4 p-6 lg:p-2">
+                <!-- Dropdown link  -->
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open"
+                        class="text-black flex flex-row items-center w-full  text-sm text-left bg-transparent rounded-lg hover:text-red-800 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900    focus:outline-none focus:shadow-outline">
+                        <span> <a href="index.html">ABOUT US</a></span> <svg fill="currentColor" viewBox="0 0 20 20"
+                            :class="{'rotate-180': open, 'rotate-0': !open}"
+                            class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="transform opacity-0 scale-95"
+                        x-transition:enter-end="transform opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="transform opacity-100 scale-100"
+                        x-transition:leave-end="transform opacity-0 scale-95"
+                        class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-36">
+                        <div class="px-2 py-2 bg-white rounded-md shadow text-black">
+                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-lg  hover:text-red-800  md:mt-0 hover:text-gray-900  focus:outline-none focus:shadow-outline"
+                                href="our-story.html">OUR STORY</a>
+                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-lg  hover:text-red-800  md:mt-0 hover:text-gray-900  focus:outline-none focus:shadow-outline"
+                                href="team.html">TEAM</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ******* -->
+                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                    href="our-work.html">OUR WORK</a>
+
+                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                    href="spaces.html">SPACES</a>
+                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                    href="stories.html">STORIES</a>
+
+                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                    href="media-publication.html"> MEDEA/PUBLICATIONS</a>
+                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                    href="get-involved.html">WORK WITH US</a>
+                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                    href="contact.html">CONTACT US</a>
+                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800    md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                    href="donate.html">DONATE</a>
+
+            </nav>
+            <!-- Navbar link End  -->
+        </div>
+        <div class="header-color line-height"></div>
+
+    </div>
+    <!-- ****  Header section End   *** -->
+
+
+    <!-- Main body  -->
+    <!-- section-1 -->
+    <section class="px-2">
+
+        <div class="container px-6 mx-auto">
+            <!-- <h1 class="text-center text-black font-bold lg:text-4xl text-3xl py-8 md:text-2lg">
+                Programme
+            </h1> -->
+
+            <div class="lg:flex lg:items-center gap-x-11 ">
+
+                <!-- div-1 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://www.downtoearth.org.in/news/environment/ngt-stops-mining-in-ecologically-sensitive-madhav-national-park-in-madhya-pradesh-85290">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://cdn.downtoearth.org.in/library/large/2022-10-04/0.53962300_1664887677_madhav_natioinal_park.jpg">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                    NGT Stops Mining in MP
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+
+                <!-- div-2 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://www.newsclick.in/challenges-administrative-transitions-affect-migrant-workers-most
+                        ">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://www.newsclick.in/sites/default/files/styles/responsive_885/public/2022-02/Malanpur.png?itok=NWV6LYHK">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                    Story on Malanpur, Bhind in Madhya Prades
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+
+                <!-- div-3 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://www.thehindu.com/news/national/other-states/encroachment-of-mp-national-park-land-continues-unchecked/article30837151.ece">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://th-i.thgim.com/public/news/national/other-states/43bpxe/article30837150.ece/alternates/LANDSCAPE_1200/DE16FAMILY"">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                    Madhav National Park: Displaced Families Await Land Allotment
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+
+
+                <!-- ******** -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--section-2-->
+    <section class=" px-2">
+        <div class="container px-6 mx-auto">
+            <!-- <h1 class="text-center text-black font-bold lg:text-4xl text-3xl md:text-2lg">
+                Project
+            </h1> -->
+
+            <div class="lg:flex lg:items-center gap-x-11 ">
+
+                <!-- div-1 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://www.newslaundry.com/2020/02/18/village-of-widows-how-madhya-pradesh-devastated-an-adivasi-community">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://gumlet.assettype.com/newslaundry%2F2020-02%2F9d927eed-0167-4d5e-8be8-2df5f3e161e3%2Fvillage_of_widows.jpg?rect=0%2C0%2C1920%2C1080&auto=format%2Ccompress&fit=max&format=webp&w=1140&dpr=1.5">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                    MP's Village of Widows
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+
+
+                <!-- div-2 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://www.thehindu.com/news/national/other-states/lawyers-demand-end-to-manual-scavenging/article30090856.ece">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://th-i.thgim.com/public/news/national/other-states/6orgz9/article53263893.ece/alternates/LANDSCAPE_1200/WhatsApp-Image-2019-11-26-at-24825-PMjpeg">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                    Lawyers demand end to Manual Scavenging in M.P
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+
+                <!-- div-3 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://www.thebetterindia.com/92494/shivpuri-students-create-library-cum-legal-aid-centre/">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://en-media.thebetterindia.com/uploads/2017/03/IDIA-Shivpuri.jpg?compress=true&quality=80&w=800&dpr=1.5">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                     Students demanded Nagar Palika to build a library for them and succeed 
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section-3 -->
+    <section class="px-2">
+
+        <div class="container px-6 mx-auto">
+            <!-- <h1 class="text-center text-black font-bold lg:text-4xl text-3xl py-8 md:text-2lg">
+                Programme
+            </h1> -->
+
+            <div class="lg:flex lg:items-center gap-x-11 ">
+
+                <!-- div-1 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://www.newindianexpress.com/nation/2017/dec/17/mp-tribals-told-to-declare-poverty-on-walls-of-homes-1729377.html">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2017/12/22/Pictures/_e3a86efe-e735-11e7-bb33-29502a427e3f.jpg">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                    Glorification of poverty: how mera parivar gareeb hai was written on BPL homes
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+
+                <!-- div-2 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://101reporters.com/article/society/New_hope_for_Shivpuris_tribal_people">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://assets.ramen.101reporters.com/static/publishercover/101PUB81489.png">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                    New hope for Shivpuri's tribal people
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+                <!-- div-3 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://www.indialegallive.com/human-rights-news/displaced-tribals-the-promised-land/">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://d2r2ijn7njrktv.cloudfront.net/IL/uploads/2020/02/09144509/Madhav-National-Park--768x433.jpeg">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                    Story on Displaced Adivasis
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section-4 -->
+    <section class=" px-2">
+        <div class="container px-6 mx-auto">
+            <!-- <h1 class="text-center text-black font-bold lg:text-4xl text-3xl md:text-2lg">
+                Project
+            </h1> -->
+
+            <div class="lg:flex lg:items-center gap-x-11 ">
+
+                <!-- div-1 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://www.barandbench.com/news/winner-agami-prize-20200">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://gumlet.assettype.com/barandbench%2F2020-07%2F47efac74-cd7c-4b49-8678-17cf9dd1949c%2FAgami_Prize_2020.png?auto=format%2Ccompress&fit=max&format=webp&w=768&dpr=1.5">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                    Zenith wins Agami Prize
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+
+                <!-- div-2 -->
+                <div class="carousel  container mx-auto bg-white shadow-2xl rounded-lg my-10 h-80 pro-one"
+                    style="max-width:500px; ">
+                    <div class="carousel-inner relative overflow-hidden w-full p-4 image-one">
+                        <a target="_blank" href="https://www.newsclick.in/88%25-Migrant-Workers-Madhya-Pradesh-Full-Govt-aid-promised-State-Government-Report">
+
+                        <!-- <a href=""></a> need to make image link -->
+                        <img class=" w-full h-72 "
+                            src="https://www.newsclick.in/sites/default/files/styles/responsive_885/public/2021-09/migrant%20workesr.PNG?itok=RSl5jvoa">
+                        <div class="text-head ">
+                                <h1 class="text-xl font-bold text-center text-white capitalize lg:text-xl  p-2 sub-head">
+                                    88.5% of the migrant labourers did not receive the financial aid
+                                </h1>
+                        </div>
+
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+                <!-- div-3 -->
+                
+
+            </div>
+        </div>
+    </section>
+
+
+  <!-- footer start-->
+  <footer class="bg-gray-900" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-24">
+        <div class="xl:grid xl:grid-cols-4 xl:gap-8">
+            <div class="text-white">
+
+                <!-- <img src="public/img/home-page-icon/zenith-logo-med-trans.png" alt="logo-img" class=" w-64"> -->
+                <a href="index.html"><img src="public/img/logo.png" alt="logo" class=" w-44"></a>
+            </div>
+
+            <div class="text-white">
+                <h1 class="heading-font-family text-lg  text-white capitalize lg:text-2xl mb-4">
+                    IN MEDIA </h1>
+                <!-- <p class="mt-2 text-sm leading-6 text-gray-300">The latest news, articles, and resources, sent to
+                        your inbox weekly.</p> -->
+                <div class="media-flex">
+
+                    <div class="news-list-item">
+                        <div class="item-image">
+                            <a
+                                href="https://www.downtoearth.org.in/news/environment/ngt-stops-mining-in-ecologically-sensitive-madhav-national-park-in-madhya-pradesh-85290">
+                                <img width="58" height="58" src="public/img/Instagram-img/Media-1.jpg"
+                                    class="attachment-thumbnail size-thumbnail wp-post-image" alt="a">
+                            </a>
+                        </div>
+                        <div class="item-text-holder">
+                            <h6 class="item-title">NGT stops mining </h6>
+                            <div class="item-date"> 04 October 2022</div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="news-list-item">
+                        <div class="item-image">
+                            <a href="">
+                                <img width="58" height="100" src="public/img/Instagram-img/Malanpur.webp"
+                                    class="attachment-thumbnail size-thumbnail wp-post-image h-full" alt="a"> </a>
+                        </div>
+                        <div class="item-text-holder">
+                            <h6 class="item-title">Malanpur-Migrant Workers </h6>
+                            <div class="item-date">19 Feb 2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-white">
+                <h1 class="heading-font-family text-lg  text-white capitalize lg:text-2xl mb-4">INSTAGRAM </h1>
+                <!-- <p class="mt-2 text-sm leading-6 text-gray-300">The latest news, articles, and resources, sent to
+                        your inbox weekly.</p> -->
+                <div class="instagram-grid">
+
+
+                    <div class="mkd-instagram-item-holder">
+                        <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                            <img class="insta-img" src="public/img/Instagram-img/zenith-insta-1.jpg" alt="">
+                        </a>
+                    </div>
+
+
+                    <div class="mkd-instagram-item-holder">
+                        <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                            <img class="insta-img" src="public/img/Instagram-img/zenith-insta-2.jpg" alt="">
+                        </a>
+                    </div>
+
+
+                    <div class="mkd-instagram-item-holder">
+                        <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                            <img class="insta-img" src="public/img/Instagram-img/zenith-insta-3.jpg" alt="">
+                        </a>
+                    </div>
+
+
+                    <div class="mkd-instagram-item-holder">
+                        <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                            <img class="insta-img" src="public/img/Instagram-img/zenith-insta--4.jpg" alt="">
+                        </a>
+                    </div>
+
+
+                    <div class="mkd-instagram-item-holder">
+                        <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                            <img class="insta-img" src="public/img/Instagram-img/zenith-insta-5.jpg" alt="">
+                        </a>
+                    </div>
+
+
+                    <div class="mkd-instagram-item-holder">
+                        <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                            <img class="insta-img" src="public/img/Instagram-img/zenith-insta-6.jpg" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- </div> -->
+            <div class="mt-10 xl:mt-0">
+                <h1 class="heading-font-family text-lg  text-white capitalize lg:text-2xl mb-4">
+                    SUBSCRIBE</h1>
+                <p class="mt-2 text-sm leading-6 text-gray-300">The latest news, articles, and resources,
+                    sent to
+                    your inbox weekly.</p>
+                <form class="mt-6 sm:flex sm:max-w-md">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input type="email" name="email-address" id="email-address" autocomplete="email" required
+                        class="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
+                        placeholder="Enter your email">
+                    <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
+                        <button type="submit"
+                            class="flex w-full items-center justify-center rounded-md bg-orange-700 px-3 py-2 text-sm  text-white shadow-sm hover:bg-orange-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div
+            class="mt-16 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
+            <div class="flex space-x-6 md:order-2">
+                <a href="https://www.facebook.com/zenithfeelthechange " class="text-gray-500 hover:text-gray-400">
+                    <span class="sr-only">Facebook</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/zenithssle/ " class="text-gray-500 hover:text-gray-400">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://twitter.com/Zenithssle" class="text-gray-500 hover:text-gray-400">
+                    <span class="sr-only">Twitter</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                </a>
+
+                <!-- <a href="#" class="text-gray-500 hover:text-gray-400">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a> -->
+
+                <a href="https://www.linkedin.com/company/zenith-society-for-socio-legal-empowerment/"
+                    class="text-gray-500 hover:text-gray-400">
+                    <span class="sr-only">LinkedIn</span>
+                    <!-- <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M19.5 3H4.5C3.121 3 2 4.121 2 5.5v13C2 19.879 3.121 21 4.5 21h15c1.379 0 2.5-1.121 2.5-2.5v-13C22 4.121 20.879 3 19.5 3zM8 18h-2v-7h2v7zM7 9.125c-.689 0-1.25-.561-1.25-1.25s.561-1.25 1.25-1.25 1.25.561 1.25 1.25-.561 1.25-1.25 1.25zM18 18h-2v-3.938c0-1.281-.438-2.563-1.688-2.563-1.688 0-1.938 1.313-1.938 2.5V18h-2V8h2v1.313h.063c.313-.594 1.125-1.25 2.313-1.25 2.469 0 2.937 1.625 2.937 3.75V18z" />
+                    </svg> -->
+                    <svg class="sw-6 h-6" aria-hidden="true" focusable="false" data-prefix="fab"
+                        data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                        data-fa-i2svg="">
+                        <path fill="currentColor"
+                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+                        </path>
+                    </svg>
+                </a>
+
+            </div>
+            <p class="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">&copy; 2020 Your Company,
+                Inc. All
+                rights reserved.</p>
+        </div>
+        <p class="mt-4 text-xs leading-5  md:order-1 md:mt-0 text-gray-300">
+            built with 🤍 by <a
+                href="https://t4glabs.discourse.group/u?cards=no&group=Tech4Good-Fellows&order=likes_received&period=all"
+                target="_blank" class="text-gray-300 hover:text-white">Tech4Good Fellows</a> & Hosted Freely
+            on <a href="#" class="text-gray-300 hover:text-white">Github Pages</a>
+            </a>
+        </p>
+    </div>
+</footer>
+<!-- </footer> -->
+
+
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
