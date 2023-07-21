@@ -386,3 +386,10 @@ img:nth-child(5) {
 .team-card:hover .team-name {
   display: block;
 }
+
+
+
+
+.testimonial-div{
+  height: 327px;
+}
