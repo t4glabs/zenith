@@ -641,6 +641,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.-mt-8 {
+  margin-top: -2rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -693,10 +697,6 @@ video {
   margin-top: 0.625rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -729,6 +729,10 @@ video {
   display: inline-flex;
 }
 
+.flow-root {
+  display: flow-root;
+}
+
 .grid {
   display: grid;
 }
@@ -743,6 +747,10 @@ video {
 
 .aspect-\[3\/2\] {
   aspect-ratio: 3/2;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-104 {
@@ -779,6 +787,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-16 {
@@ -991,6 +1003,10 @@ video {
   row-gap: 4rem;
 }
 
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
 .gap-y-6 {
   row-gap: 1.5rem;
 }
@@ -1015,6 +1031,14 @@ video {
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-lg {
@@ -1051,14 +1075,14 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
-.bg-indigo-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
 }
 
 .bg-indigo-600 {
@@ -1155,6 +1179,15 @@ video {
   padding: 1.5rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1168,6 +1201,11 @@ video {
 .px-3\.5 {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
+}
+
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
 .px-4 {
@@ -1954,6 +1992,10 @@ img:nth-child(5) {
   display: block;
 }
 
+.testimonial-div{
+  height: 327px;
+}
+
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -1977,11 +2019,6 @@ img:nth-child(5) {
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-indigo-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(129 140 248 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-indigo-500:hover {
@@ -2158,6 +2195,10 @@ img:nth-child(5) {
     margin-top: 5rem;
   }
 
+  .sm\:inline-block {
+    display: inline-block;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -2168,6 +2209,10 @@ img:nth-child(5) {
 
   .sm\:w-\[72\.1875rem\] {
     width: 72.1875rem;
+  }
+
+  .sm\:w-full {
+    width: 100%;
   }
 
   .sm\:max-w-md {
@@ -2197,6 +2242,11 @@ img:nth-child(5) {
 
   .sm\:place-self-center {
     place-self: center;
+  }
+
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .sm\:px-6 {
@@ -2229,6 +2279,11 @@ img:nth-child(5) {
 
   .sm\:text-start {
     text-align: start;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .sm\:text-3xl {
@@ -2364,6 +2419,10 @@ img:nth-child(5) {
 
   .lg\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .lg\:mb-2 {
+    margin-bottom: 0.5rem;
   }
 
   .lg\:mb-4 {
@@ -2517,16 +2576,16 @@ img:nth-child(5) {
     padding-top: 6rem;
   }
 
-  .lg\:pt-32 {
-    padding-top: 8rem;
-  }
-
   .lg\:pt-4 {
     padding-top: 1rem;
   }
 
   .lg\:pt-72 {
     padding-top: 18rem;
+  }
+
+  .lg\:pt-8 {
+    padding-top: 2rem;
   }
 
   .lg\:text-left {
@@ -2553,6 +2612,11 @@ img:nth-child(5) {
     line-height: 1;
   }
 
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -2577,10 +2641,6 @@ img:nth-child(5) {
     width: 100%;
   }
 
-  .xl\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -2597,6 +2657,11 @@ img:nth-child(5) {
   .xl\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .xl\:text-5xl {
