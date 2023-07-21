@@ -1179,9 +1179,18 @@ video {
   padding: 2rem;
 }
 
+.p-16 {
+  padding: 4rem;
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .px-2 {
@@ -2215,10 +2224,6 @@ img:nth-child(5) {
 
   .sm\:flex {
     display: flex;
-  }
-
-  .sm\:h-full {
-    height: 100%;
   }
 
   .sm\:w-64 {
