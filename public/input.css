@@ -307,6 +307,7 @@ img:nth-child(5) {
 .apply-link:hover,
 .apply-link:active {
   text-decoration: underline;
+  color: #991B1B;
 }
 
 
