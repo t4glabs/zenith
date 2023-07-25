@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenith</title>
     <link href="output.css" rel="stylesheet">
-
-
+    <link href="partners.css" rel="stylesheet">
 
     <!-- font for heading  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,23 +15,13 @@
 
 
     <!-- font for paragraphs  -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400&display=swap" rel="stylesheet">
 
 </head>
 
-
-
-</head>
-
-<body class="paragraphs-font bg-stone-50 font-sans leading-normal tracking-normal text-gray-700 text-base">
-
-    <!-- Header section Started  -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<body class="paragraphs-font font-sans leading-normal tracking-normal text-gray-700 text-base">
 
     <div class="w-full text-gray-300 bg-white drop-shadow-md">
         <div x-data="{ open: false }"
@@ -92,179 +81,375 @@
 
                 <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
                     href="spaces.html">SPACES</a>
+
                 <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
                     href="stories.html">STORIES</a>
 
                 <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
                     href="media-publication.html">MEDIA/PUBLICATIONS</a>
+
                 <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
                     href="get-involved.html">WORK WITH US</a>
+
                 <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
                     href="contact.html">CONTACT US</a>
+
                 <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800    md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
                     href="donate.html">DONATE</a>
 
             </nav>
             <!-- Navbar link End  -->
         </div>
+        <!-- Header Js  -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
         <div class="header-color line-height"></div>
 
     </div>
-    <!-- ****  Header section End   *** -->
+    <!--   Header section End  -->
 
 
 
-    <!-- carousel ********-->
-    <!-- caroulsel -1 -->
-    <div>
-        <div class=" mx-auto w-3/4 pt-8">
-            <h1 class="lg:text-4xl text-2xl font-bold">
-                Kalam Learning Center
-            </h1>
-        </div>
+
+    <main>
+        <!-- caroulsel -1 -->
+
+        <section class="lg:px-24 lg:py-8 py-4 flex flex-col justify-center items-center">
+            <div class="px-16  p-2">
+                <h1 class=" max-w-5xl text-2xl leading-8 sm:text-4xl  sm:text-start text-color sm:text-center mb-6">
+                    Kalam Learning Center</h1>
+            </div>
+
+            <div class="flex items-center justify-center relative container mx-auto lg:my-4 p-2">
+                <div x-data="{ activeSlide: 0 }" class="relative overflow-hidden w-full rounded-md lg:mx-14 mx-6">
+                    <!-- slides -->
+                    <div class="carousel">
+
+                        <!-- slide-1 -->
+                        <div x-show="activeSlide === 0" class="carousel-item border border-gray-800  ">
+                            <img class="w-full megha" src="public/img/spaces/kalam-1.jpg" alt="Image 1">
+                        </div>
+
+                        <!-- slide-2 -->
+                        <div x-show="activeSlide === 1" class="carousel-item border border-gray-800  ">
+                            <img class="w-full megha" src="public/img/spaces/kalam-2.jpg" alt="Image 2">
+                        </div>
+
+                        <!-- slide-3 -->
+                        <div x-show="activeSlide === 2" class="carousel-item border border-gray-800  ">
+                            <img class="w-full megha" src="public/img/spaces/kalam-3.jpg" alt="Image 3">
+                        </div>
+
+                        <!-- slide-4 -->
+                        <div x-show="activeSlide === 3" class="carousel-item border border-gray-800  ">
+                            <img class="w-full megha" src="public/img/spaces/kalam-4.jpg" alt="Image 4">
+                        </div>
+
+
+                    </div>
+
+                    <!-- controllers -->
+                    <div class="carousel-controls">
+                        <button @click="activeSlide = (activeSlide - 1 + 4) % 4"
+                            class="carousel-control-prev w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-red-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">
+                            ‹
+                        </button>
+                        <button @click="activeSlide = (activeSlide + 1) % 4"
+                            class="carousel-control-next w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-red-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">
+                            ›
+                        </button>
+                    </div>
+                    <!-- indicators -->
+                    <div class="carousel-indicators mt-2 flex justify-center">
+                        <template x-for="(slide, index) in 4">
+                            <button @click="activeSlide = index" :class="{'active': activeSlide === index}"
+                                class="carousel-indicator text-4xl text-gray-400 hover:text-gray-900">•</button>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-justify mx-auto lg:px-20 px-4 md:px-8 max-w-7xl">
+
+                <p class="p-1">
+                    Kalam Learning Centre, offers a safe physical space for young individuals to explore and grow. Kalam
+                    Learning Centre is a 'Library cum Counseling Center,' the foundations of which were laid through a
+                    student-led movement - advocating for better infrastructure for students in Shivpuri City. Through
+                    their
+                    persistent efforts, the Municipal Council of Shivpuri sanctioned a government building and provided
+                    the
+                    necessary infrastructure for the functioning of the center. Over time, it evolved from just being a
+                    library to a platform for enhancing personal, professional, and community development among the
+                    youth of
+                    Shivpuri.
+                </p>
+
+                <p class="p-1">
+                    In the absence of affordable public libraries in Shivpuri, Kalam Learning Center provides access to
+                    study materials, newspapers, magazines and wifi, free of cost. It not only provides a peaceful
+                    reading
+                    space but also offers students with career counselling sessions.
+                </p>.
+                </p>
+
+                <p class="p-1">
+                    Events such as chess tournaments, painting exhibitions, youth festivals, are also hosted from time
+                    to
+                    time. These events contribute to the holistic development of the youth and create opportunities for
+                    social interaction and exploration of diverse interests. The space is managed by the Shivpuri Youth
+                    Forum.
+                </p>
+            </div>
+        </section>
+        <!-- end -->
+
+        <!-- caroulsel -2 -->
+
+        <section class="lg:px-24 lg:py-8  py-4 flex flex-col justify-center items-center">
+            <div class="lg:px-16  p-2 ">
+                <h1 class="max-w-5xl text-2xl leading-8 sm:text-4xl  sm:text-start text-color sm:text-center mb-6">
+                    Samvidhi Sashaktikaran Kendra, Gwalior</h1>
+            </div>
+
+            <div class="flex items-center justify-center relative container mx-auto lg:my-4 p-2">
+                <div x-data="{ activeSlide: 0 }" class="relative overflow-hidden w-full rounded-md lg:mx-14 mx-6">
+                    <!-- slides -->
+                    <div class="carousel">
+                        <div x-show="activeSlide === 0" class="carousel-item border border-gray-800  ">
+                            <img class="w-full megha" src="public/img/spaces/gwalior-1.JPG" alt="Image 1">
+                        </div>
+                        <div x-show="activeSlide === 1" class="carousel-item border border-gray-800  ">
+                            <img class="w-full megha" src="public/img/spaces/gwalior-2.JPG" alt="Image 2">
+                        </div>
+                        <div x-show="activeSlide === 2" class="carousel-item border border-gray-800  ">
+                            <img class="w-full megha" src="public/img/spaces/gwalior-3.jpeg" alt="Image 3">
+
+                        </div>
+
+                        <div x-show="activeSlide === 3" class="carousel-item border border-gray-800  ">
+                            <img class="w-full megha" src="public/img/spaces/gwalior-4.jpeg" alt="Image 4">
+                        </div>
+                        <!-- controllers -->
+                        <div class="carousel-controls">
+                            <button @click="activeSlide = (activeSlide - 1 + 4) % 4"
+                                class="carousel-control-prev w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-red-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">
+                                ‹
+                            </button>
+                            <button @click="activeSlide = (activeSlide + 1) % 4"
+                                class="carousel-control-next w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-red-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">
+                                ›
+                            </button>
+                        </div>
+                        <!-- indicators -->
+                        <div class="carousel-indicators mt-2 flex justify-center">
+                            <template x-for="(slide, index) in 4">
+                                <button @click="activeSlide = index" :class="{'active': activeSlide === index}"
+                                    class="carousel-indicator text-4xl text-gray-400 hover:text-gray-900">•</button>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-justify mx-auto lg:px-20 px-4 md:px-8 max-w-7xl">
+
+                <p class="p-1">
+                    Located in the heart of the city of Gwalior, Samvidhi Sashaktikaran Kendra is primarily a legal aid
+                    center, but is so much more. A space curated to create safety, accessibility and routine. Equipped
+                    with a baithak - a hall used for hosting workshops, training, client meetings and get togethers, a
+                    reading space called the Savitri Bai Library - a quiet place to read, write and curate and, a
+                    working area called “Sahr the working space” named after Sahr (meaning wilderness) from word
+                    Sahariya - a tribal community we engage most with. This is where all the legal, non legal work takes
+                    place - where lawyers, paralegals and students ideate, design, strategise and conduct daily affairs.
+                    We invite and offer this space for film screenings, exchanging ideas and building communities.
+                </p>
+
+
+            </div>
+        </section>
+
+
+
+        <!-- caroulsel -3 -->
+
+        <section class="lg:px-24 lg:py-8 py-4 flex flex-col justify-center items-center">
+            <div class="lg:px-16  p-2 ">
+                <h1 class="max-w-5xl text-2xl leading-8 sm:text-4xl  sm:text-start text-color sm:text-center mb-6">
+                    Samudayik Adhikar Kendra, Malanpur - Labour Rights
+                </h1>
+            </div>
+
+            <div class="flex items-center justify-center relative container mx-auto lg:my-4 p-2">
+                <div x-data="{ activeSlide: 0 }" class="relative overflow-hidden w-full rounded-md lg:mx-14 mx-6">
+                    <!-- slides -->
+                    <div class="carousel">
+                        <div x-show="activeSlide === 0" class="carousel-item border border-gray-800  ">
+                            <img class="w-full megha" src="public/img/spaces/malanpur-1.jpg" alt="Image 1">
+                        </div>
+                        <div x-show="activeSlide === 1" class="carousel-item border border-gray-800">
+                            <img class="w-full megha" src="public/img/spaces/malanpur-2.jpg" alt="Image 2">
+                        </div>
+                        <div x-show="activeSlide === 2" class="carousel-item border border-gray-800">
+                            <img class="w-full megha" src="public/img/spaces/malanpur-3.jpg" alt="Image 3">
+
+                        </div>
+
+                        <div x-show="activeSlide === 3" class="carousel-item border border-gray-800">
+                            <img class="w-full megha" src="public/img/spaces/malanpur-4.jpg" alt="Image 4">
+                        </div>
+                        <!-- controllers -->
+                        <div class="carousel-controls">
+                            <button @click="activeSlide = (activeSlide - 1 + 4) % 4"
+                                class="carousel-control-prev w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-red-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">
+                                ‹
+                            </button>
+                            <button @click="activeSlide = (activeSlide + 1) % 4"
+                                class="carousel-control-next w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-red-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">
+                                ›
+                            </button>
+                        </div>
+                        <!-- indicators -->
+                        <div class="carousel-indicators mt-2 flex justify-center">
+                            <template x-for="(slide, index) in 4">
+                                <button @click="activeSlide = index" :class="{'active': activeSlide === index}"
+                                    class="carousel-indicator text-4xl text-gray-400 hover:text-gray-900">•</button>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-justify mx-auto lg:px-20 px-4 md:px-8 max-w-7xl">
+
+                <p class="p-1">
+                    Located in the heart of the city of Gwalior, Samvidhi Sashaktikaran Kendra is primarily a legal aid
+                    Samudayik Adhikar Kendra (SAK) is the epicentre of support for seven villages in the industrial area
+                    of
+                    Malanpur, Bhind. SAK is a community space - a one-stop worker’s facilitation centre to avail basic
+                    entitlements and schemes for a large majority of informal workers in the area. Equipped with a
+                    massive
+                    hall and two working spaces, SAK hosts a variety of events, training and workshops for youth and
+                    community leaders.
+                </p>
+
+
+            </div>
+        </section>
+
+
+
+
+        <!-- caroulsel -4 -->
+
+        <section class="lg:px-24 lg:py-8 py-4 flex flex-col justify-center items-center">
+            <div class="lg:px-16  p-2 ">
+                <h1 class="max-w-5xl text-2xl leading-8 sm:text-4xl  sm:text-start text-color sm:text-center mb-6">
+                    Samvidhi Sashaktikaran Kendra, Shivpuri
+
+                </h1>
+            </div>
+
+            <div class="flex items-center justify-center relative container mx-auto lg:my-4 p-2 ">
+                <div x-data="{ activeSlide: 0 }" class="relative overflow-hidden w-full rounded-md lg:mx-14 mx-6">
+                    <!-- slides -->
+                    <div class="carousel ">
+                        <div x-show="activeSlide === 0" class="carousel-item border border-gray-800">
+                            <img class="w-full megha" src="public/img/spaces/shivpuri-1-min.JPG" alt="Image 1">
+                        </div>
+                        <div x-show="activeSlide === 1" class="carousel-item border border-gray-800">
+                            <img class="w-full megha" src="public/img/spaces/shivpuri-2-min.JPG" alt="Image 2">
+                        </div>
+                        <div x-show="activeSlide === 2" class="carousel-item border border-gray-800">
+                            <img class="w-full megha" src="public/img/spaces/shivpuri-3-min.jpg" alt="Image 3">
+
+                        </div>
+
+                        <div x-show="activeSlide === 3" class="carousel-item border border-gray-800">
+                            <img class="w-full megha" src="public/img/spaces/shivpuri-4-min.jpg" alt="Image 4">
+                        </div>
+                        <!-- controllers -->
+                        <div class="carousel-controls">
+                            <button @click="activeSlide = (activeSlide - 1 + 4) % 4"
+                                class="carousel-control-prev w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-red-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">
+                                ‹
+                            </button>
+                            <button @click="activeSlide = (activeSlide + 1) % 4"
+                                class="carousel-control-next w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-red-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">
+                                ›
+                            </button>
+                        </div>
+                        <!-- indicators -->
+                        <div class="carousel-indicators mt-2 flex justify-center">
+                            <template x-for="(slide, index) in 4">
+                                <button @click="activeSlide = index" :class="{'active': activeSlide === index}"
+                                    class="carousel-indicator text-4xl text-gray-400 hover:text-gray-900">•</button>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-justify mx-auto lg:px-20 px-4 md:px-8 max-w-7xl">
+
+                <p class="p-1">
+                    Located in the center of Shivpuri city, surrounded by the beautiful Madhav National Park, Samvidhi
+                    Sashaktikaran Kendra brings together a rich blend of different elements. Our office reflects a mix
+                    of ancient fossils, local and foreign plants, a variety of reading materials, traditional marble
+                    tables, and, above all, a community of people from diverse backgrounds. At Samvidhi Sashaktikaran
+                    Kendra, we have the Shamnad Bashir Reading Space—a dedicated area for students to engage in reading
+                    and studying. Additionally, we have the Anil Dewan Legal Resource Center, named in honor of Anil
+                    Dewan, which serves as our working area for daily operations. Moreover, we have outdoor Chaupal,
+                    where discussions and meetings take place and finally the Zen Garden, an outdoor space surrounded by
+                    trees which provides a peaceful and silent zone to sit, work or contemplate under the shade of neem,
+                    bargad and peepal. You will occasionally spot Owlets, Indian grey hornbills, parakeets, warblers,
+                    sparrows, rose-ringed parrots, green pigeons, bats, snakes, and mongoose families - all a part of
+                    our natural ecosystems and landscape.
+                </p>
+
+
+            </div>
+        </section>
+        <!-- <div x-data="{ activeSlide: 0 }" class="relative overflow-hidden w-full">
+        
+            <div class="carousel">
+                <div x-show="activeSlide === 0" class="carousel-item border border-gray-800">
+                    <img class="w-full megha" src="public/img/spaces/gwalior-1.JPG" alt="Image 1">
+                </div>
+                <div x-show="activeSlide === 1" class="carousel-item">
+                    <img class="w-full megha" src="public/img/spaces/gwalior-2.JPG" alt="Image 2">
+                </div>
+                <div x-show="activeSlide === 2" class="carousel-item">
+                    <img class="w-full megha" src="public/img/spaces/gwalior-3.jpeg" alt="Image 3">
+
+                </div>
+
+                <div x-show="activeSlide === 3" class="carousel-item">
+                    <img class="w-full megha" src="public/img/spaces/gwalior-4.jpeg" alt="Image 4">
+                </div>
     
-        <div class="pic-ctn">
-
-            <img src="public/img/spaces/kalam-1.jpg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px; width: 100%;">
-            <img src="public/img/spaces/kalam-2.jpg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-            <img src="public/img/spaces/kalam-3.jpg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-            <img src="public/img/spaces/kalam-4.jpg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-        </div>
-        <div class="text-justify mx-auto w-3/4 py-8">
-            <p>
-                Kalam Learning Centre, offers a safe physical space for young individuals to explore and grow. Kalam
-                Learning Centre is a 'Library cum Counseling Center,' the foundations of which were laid through a
-                student-led movement - advocating for better infrastructure for students in Shivpuri City. Through their
-                persistent efforts, the Municipal Council of Shivpuri sanctioned a government building and provided the
-                necessary infrastructure for the functioning of the center. Over time, it evolved from just being a
-                library to a platform for enhancing personal, professional, and community development among the youth of
-                Shivpuri.
-            </p>
-
-            <p>
-                In the absence of affordable public libraries in Shivpuri, Kalam Learning Center provides access to
-                study materials, newspapers, magazines and wifi, free of cost. It not only provides a peaceful reading
-                space but also offers students with career counselling sessions.
-            </p>
-
-            <p>
-                Events such as chess tournaments, painting exhibitions, youth festivals, are also hosted from time to
-                time. These events contribute to the holistic development of the youth and create opportunities for
-                social interaction and exploration of diverse interests. The space is managed by the Shivpuri Youth
-                Forum.
-            </p>
-        </div>
-
-    </div>
+                <div class="carousel-controls">
+                    <button @click="activeSlide = (activeSlide - 1 + 4) % 4"
+                        class="carousel-control-prev w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">
+                        ‹
+                    </button>
+                    <button @click="activeSlide = (activeSlide + 1) % 4"
+                        class="carousel-control-next w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">
+                        ›
+                    </button>
+                </div>
+               
+                <div class="carousel-indicators mt-2 flex justify-center">
+                    <template x-for="(slide, index) in 4">
+                        <button @click="activeSlide = index" :class="{'active': activeSlide === index}"
+                            class="carousel-indicator text-4xl text-gray-400 hover:text-gray-900">•</button>
+                    </template>
+                </div>
+            </div>
+        </div> -->
+        <!-- end -->
+    </main>
 
 
-
-    <!-- carousel- 2 -->
-    <div>
-        <div class=" mx-auto w-3/4 pt-8">
-            <h1 class="lg:text-4xl text-2xl font-bold">
-                Samvidhi Sashaktikaran Kendra, Gwalior
-            </h1>
-        </div>
-        <div class="pic-ctn">
-
-            <img src="public/img/spaces/gwalior-1.JPG" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px; width: 100%;">
-            <img src="public/img/spaces/gwalior-2.JPG" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-            <img src="public/img/spaces/gwalior-3.jpeg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-            <img src="public/img/spaces/gwalior-4.jpeg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-        </div>
-        <div class="text-justify mx-auto w-3/4 py-8">
-            <p>
-                Located in the heart of the city of Gwalior, Samvidhi Sashaktikaran Kendra is primarily a legal aid
-                center, but is so much more. A space curated to create safety, accessibility and routine. Equipped with
-                a baithak - a hall used for hosting workshops, training, client meetings and get togethers, a reading
-                space called the Savitri Bai Library - a quiet place to read, write and curate and, a working area
-                called “Sahr the working space” named after Sahr (meaning wilderness) from word Sahariya - a tribal
-                community we engage most with. This is where all the legal, non legal work takes place - where lawyers,
-                paralegals and students ideate, design, strategise and conduct daily affairs. We invite and offer this
-                space for film screenings, exchanging ideas and building communities.
-            </p>
-        </div>
-
-    </div>
-
-
-
-    <!-- carousel- 3 -->
-    <div>
-        <div class=" mx-auto w-3/4 pt-8">
-            <h1 class="lg:text-4xl text-2xl font-bold">
-                Samudayik Adhikar Kendra, Malanpur - Labour Rights </h1>
-        </div>
-        <div class="pic-ctn">
-
-            <img src="public/img/spaces/malanpur-1.jpg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px; width: 100%;">
-            <img src="public/img/spaces/malanpur-2.jpg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-            <img src="public/img/spaces/malanpur-3.jpg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-            <img src="public/img/spaces/malanpur-4.jpg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-        </div>
-        <div class="text-justify mx-auto w-3/4 py-8">
-            <p>
-                Samudayik Adhikar Kendra (SAK) is the epicentre of support for seven villages in the industrial area of
-                Malanpur, Bhind. SAK is a community space - a one-stop worker’s facilitation centre to avail basic
-                entitlements and schemes for a large majority of informal workers in the area. Equipped with a massive
-                hall and two working spaces, SAK hosts a variety of events, training and workshops for youth and
-                community leaders.
-
-            </p>
-        </div>
-
-    </div>
-
-
-    <!-- carousel- 4 -->
-    <div>
-        <div class=" mx-auto w-3/4 pt-8">
-            <h1 class="lg:text-4xl text-2xl font-bold">
-                Samvidhi Sashaktikaran Kendra, Shivpuri </h1>
-        </div>
-        <div class="pic-ctn">
-
-            <img src="public/img/spaces/shivpuri-1-min.JPG" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px; width: 100%;">
-            <img src="public/img/spaces/shivpuri-2-min.JPG" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-            <img src="public/img/spaces/shivpuri-3-min.jpg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-            <img src="public/img/spaces/shivpuri-4-min.jpg" alt="" class="pic"
-                style="max-width: 500px; max-height: 300px;  width: 100%;">
-        </div>
-        <div class="text-justify mx-auto w-3/4 py-8">
-            <p>
-                Located in the center of Shivpuri city, surrounded by the beautiful Madhav National Park, Samvidhi
-                Sashaktikaran Kendra brings together a rich blend of different elements. Our office reflects a mix of
-                ancient fossils, local and foreign plants, a variety of reading materials, traditional marble tables,
-                and, above all, a community of people from diverse backgrounds. At Samvidhi Sashaktikaran Kendra, we
-                have the Shamnad Bashir Reading Space—a dedicated area for students to engage in reading and studying.
-                Additionally, we have the Anil Dewan Legal Resource Center, named in honor of Anil Dewan, which serves
-                as our working area for daily operations. Moreover, we have outdoor Chaupal, where discussions and
-                meetings take place and finally the Zen Garden, an outdoor space surrounded by trees which provides a
-                peaceful and silent zone to sit, work or contemplate under the shade of neem, bargad and peepal. You
-                will occasionally spot Owlets, Indian grey hornbills, parakeets, warblers, sparrows, rose-ringed
-                parrots, green pigeons, bats, snakes, and mongoose families - all a part of our natural ecosystems and
-                landscape.
-            </p>
-        </div>
-
-    </div>
-    <!-- carousel end -->
 
 
 
@@ -411,22 +596,12 @@
                         </svg>
                     </a>
 
-                    <!-- <a href="#" class="text-gray-500 hover:text-gray-400">
-                        <span class="sr-only">GitHub</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </a> -->
+
 
                     <a href="https://www.linkedin.com/company/zenith-society-for-socio-legal-empowerment/"
                         class="text-gray-500 hover:text-gray-400">
                         <span class="sr-only">LinkedIn</span>
-                        <!-- <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M19.5 3H4.5C3.121 3 2 4.121 2 5.5v13C2 19.879 3.121 21 4.5 21h15c1.379 0 2.5-1.121 2.5-2.5v-13C22 4.121 20.879 3 19.5 3zM8 18h-2v-7h2v7zM7 9.125c-.689 0-1.25-.561-1.25-1.25s.561-1.25 1.25-1.25 1.25.561 1.25 1.25-.561 1.25-1.25 1.25zM18 18h-2v-3.938c0-1.281-.438-2.563-1.688-2.563-1.688 0-1.938 1.313-1.938 2.5V18h-2V8h2v1.313h.063c.313-.594 1.125-1.25 2.313-1.25 2.469 0 2.937 1.625 2.937 3.75V18z" />
-                        </svg> -->
+
                         <svg class="sw-6 h-6" aria-hidden="true" focusable="false" data-prefix="fab"
                             data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                             data-fa-i2svg="">
@@ -452,6 +627,8 @@
     </footer>
     <!-- </footer> -->
 
+
+    <!-- Js File  -->
     <script src="index.js"></script>
 
 </body>

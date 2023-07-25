@@ -88,7 +88,7 @@
 
 
 .line-height {
-  height: 12px;
+  height: 9px;
 }
 
 
@@ -127,18 +127,18 @@ p {
 
 
 .approach-div {
-  height: 400px;
+  height: 360px;
 
 }
 
 .icon-size {
   border-radius: 50%;
-  width: 50%;
+  width: 40%;
 }
 
 .icon-size-second {
   border-radius: 50%;
-  width: 50%;
+  width: 30%;
 }
 
 .hand-icon {
@@ -150,8 +150,8 @@ p {
 }
 
 .power-of-Spaces-2 {
-  width: 408px;
-  height: 300px;
+  width: 510px;
+  height: 400px;
 }
 
 @media only screen and (max-width: 550px) {
@@ -393,4 +393,32 @@ img:nth-child(5) {
 
 .testimonial-div{
   height: 327px;
+}
+
+
+.megha{
+  height: 600px;
+}
+
+
+
+@media only screen and (max-width: 750px) {
+ 
+  .megha{
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+ 
+  .megha{
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+ 
+  .megha{
+    height: 300px;
+  }
 }
