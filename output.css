@@ -713,10 +713,6 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -861,14 +857,6 @@ video {
   height: 100vh;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
-.h-7 {
-  height: 1.75rem;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -911,10 +899,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-screen {
-  width: 100vw;
 }
 
 .min-w-0 {
@@ -1037,10 +1021,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .items-center {
@@ -1233,10 +1213,6 @@ video {
   --tw-bg-opacity: 0.2;
 }
 
-.bg-\[url\(\'public\/img\/access-to-justice\/Access-cover\.JPG\'\)\] {
-  background-image: url('public/img/access-to-justice/Access-cover.JPG');
-}
-
 .bg-\[url\(\'public\/img\/hero-img\.png\'\)\] {
   background-image: url('public/img/hero-img.png');
 }
@@ -1287,11 +1263,6 @@ video {
 
 .p-8 {
   padding: 2rem;
-}
-
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 
 .px-16 {
@@ -1405,10 +1376,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.pt-0 {
-  padding-top: 0px;
-}
-
 .pt-16 {
   padding-top: 4rem;
 }
@@ -1431,10 +1398,6 @@ video {
 
 .pt-60 {
   padding-top: 15rem;
-}
-
-.pt-72 {
-  padding-top: 18rem;
 }
 
 .pt-8 {
@@ -2382,10 +2345,6 @@ img:nth-child(5) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .sm\:flex-wrap {
-    flex-wrap: wrap;
-  }
-
   .sm\:gap-x-6 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
@@ -2656,10 +2615,6 @@ img:nth-child(5) {
     height: 100%;
   }
 
-  .lg\:w-1\/2 {
-    width: 50%;
-  }
-
   .lg\:w-112 {
     width: 28rem;
   }
@@ -2783,10 +2738,6 @@ img:nth-child(5) {
 
   .lg\:pt-4 {
     padding-top: 1rem;
-  }
-
-  .lg\:pt-72 {
-    padding-top: 18rem;
   }
 
   .lg\:pt-8 {
