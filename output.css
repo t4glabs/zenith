@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -191,6 +191,10 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
   font-size: 100%;
   /* 1 */
   font-weight: inherit;
@@ -338,6 +342,14 @@ ul,
 menu {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
   padding: 0;
 }
 
@@ -825,6 +837,10 @@ video {
   height: 26rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-24 {
   height: 6rem;
 }
@@ -875,6 +891,10 @@ video {
 
 .w-44 {
   width: 11rem;
+}
+
+.w-56 {
+  width: 14rem;
 }
 
 .w-6 {
@@ -1080,6 +1100,10 @@ video {
   row-gap: 2.5rem;
 }
 
+.gap-y-12 {
+  row-gap: 3rem;
+}
+
 .gap-y-16 {
   row-gap: 4rem;
 }
@@ -1263,6 +1287,11 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .px-16 {
@@ -1592,6 +1621,11 @@ video {
   color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 
+.text-red-900 {
+  --tw-text-opacity: 1;
+  color: rgb(127 29 29 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1830,7 +1864,7 @@ p {
 }
 
 .approach-div {
-  height: 360px;
+  height: 330px;
 }
 
 .icon-size {
@@ -2079,31 +2113,46 @@ img:nth-child(5) {
   display: block;
 }
 
-.testimonial-div{
-  height: 327px;
+@media only screen and (min-width: 1024px) {
+  .testimonial-div{
+    height: 327px;
+  }
 }
 
-.megha{
+/* @media only screen and (max-width: 783px) {
+ 
+ 
+  .testimonial-div{
+    height: 327px;
+  }
+  } */
+
+/* .megha{
   height: 600px;
 }
 
+
+
 @media only screen and (max-width: 750px) {
+ 
   .megha{
     height: 500px;
   }
 }
 
 @media only screen and (max-width: 550px) {
+ 
   .megha{
     height: 400px;
   }
 }
 
 @media only screen and (max-width: 450px) {
+ 
   .megha{
     height: 300px;
   }
-}
+} */
 
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
@@ -2128,6 +2177,11 @@ img:nth-child(5) {
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-900:hover {
@@ -2170,6 +2224,11 @@ img:nth-child(5) {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.hover\:text-red-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+
 .hover\:text-red-700:hover {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
@@ -2180,6 +2239,11 @@ img:nth-child(5) {
   color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 
+.hover\:text-sky-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2187,6 +2251,11 @@ img:nth-child(5) {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.focus\:bg-gray-200:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .focus\:bg-sky-100:focus {
@@ -2651,6 +2720,10 @@ img:nth-child(5) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -2830,3 +2903,6 @@ img:nth-child(5) {
     line-height: 1;
   }
 }
+
+
+
