@@ -34,88 +34,88 @@
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-   <!--   Header section start  -->
-   <div class="w-full text-gray-300 bg-white drop-shadow-md">
-    <div x-data="{ open: false }"
-        class="p-4 flex flex-col lg:px-8  mx-auto md:items-center md:justify-between md:flex-row gap-8 px-2">
+    <!--   Header section start  -->
+    <div class="w-full text-gray-300 bg-white drop-shadow-md">
+        <div x-data="{ open: false }"
+            class="p-4 flex flex-col lg:px-8  mx-auto md:items-center md:justify-between md:flex-row gap-8 px-2">
 
-        <div class="flex flex-row items-center justify-between">
+            <div class="flex flex-row items-center justify-between">
 
-            <a href="index.html"><img src="public/img/logo.png" alt="logo" class="h-full w-44"></a>
+                <a href="index.html"><img src="public/img/logo.png" alt="logo" class="h-full w-44"></a>
 
-            <button aria-label="hamberger-btn" class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
-                @click="open = !open">
-                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-800">
-                    <path x-show="!open" fill-rule="evenodd"
-                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                        clip-rule="evenodd"></path>
-                    <path x-show="open" fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Navbar link  -->
-        <nav :class="{'flex': open, 'hidden': !open}"
-            class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-            <!-- <a class="px-4 py-2 mt-2 text-base font-semibold text-black rounded-lg  md:mt-0 hover:text-sky-600 hover:bg-gray-50 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-            href="index.html">Home</a> -->
-            <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                <button @click="open = !open" aria-label="navbar-links"
-                    class="text-black flex flex-row items-center w-full px-4 py-2 mt-2 text-sm  text-left bg-transparent rounded hover:bg-gray-50 hover:text-red-800  md:w-auto md:inline md:mt-0    focus:outline-none focus:shadow-outline">
-                    <span>ABOUT US </span>
-                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
-                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
-                        <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                <button aria-label="hamberger-btn" class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+                    @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-800">
+                        <path x-show="!open" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <div x-show="open" x-transition:enter="transition ease-out duration-100"
-                    x-transition:enter-start="transform opacity-0 scale-95"
-                    x-transition:enter-end="transform opacity-100 scale-100"
-                    x-transition:leave="transition ease-in duration-75"
-                    x-transition:leave-start="transform opacity-100 scale-100"
-                    x-transition:leave-end="transform opacity-0 scale-95"
-                    class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-36">
-                    <div class="px-2 py-2 bg-white rounded-md shadow  text-black">
-                        <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded hover:bg-gray-50 hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
-                            href="our-story.html">OUR STORY</a>
-                        <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
-                            href="team.html">TEAM</a>
-                    </div>
-                </div>
             </div>
 
+            <!-- Navbar link  -->
+            <nav :class="{'flex': open, 'hidden': !open}"
+                class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                <!-- <a class="px-4 py-2 mt-2 text-base font-semibold text-black rounded-lg  md:mt-0 hover:text-sky-600 hover:bg-gray-50 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="index.html">Home</a> -->
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open" aria-label="navbar-links"
+                        class="text-black flex flex-row items-center w-full px-4 py-2 mt-2 text-sm  text-left bg-transparent rounded hover:bg-gray-50 hover:text-red-800  md:w-auto md:inline md:mt-0    focus:outline-none focus:shadow-outline">
+                        <span>ABOUT US </span>
+                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                            class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="transform opacity-0 scale-95"
+                        x-transition:enter-end="transform opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="transform opacity-100 scale-100"
+                        x-transition:leave-end="transform opacity-0 scale-95"
+                        class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-36">
+                        <div class="px-2 py-2 bg-white rounded-md shadow  text-black">
+                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded hover:bg-gray-50 hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                                href="our-story.html">OUR STORY</a>
+                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                                href="team.html">TEAM</a>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- **** -->
-            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
-                href="our-work.html">OUR WORK</a>
-            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
-                href="spaces.html">SPACES</a>
-            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
-                href="stories.html">STORIES</a>
-            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
-                href="media-publication.html">MEDIA/PUBLICATIONS</a>
-            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
-                href="get-involved.html">WORK WITH US</a>
-            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
-                href="contact.html">CONTACT US</a>
-            <a class="text-white  px-4 py-2 mt-2 text-sm header-color rounded   hover:bg-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
-                href="donate.html">DONATE</a>
+
+                <!-- **** -->
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                    href="our-work.html">OUR WORK</a>
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                    href="spaces.html">SPACES</a>
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                    href="stories.html">STORIES</a>
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                    href="media-publication.html">MEDIA/PUBLICATIONS</a>
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                    href="get-involved.html">WORK WITH US</a>
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                    href="contact.html">CONTACT US</a>
+                <a class="text-white  px-4 py-2 mt-2 text-sm header-color rounded   hover:bg-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                    href="donate.html">DONATE</a>
 
 
-        </nav>
-        <!-- Navbar link End  -->
+            </nav>
+            <!-- Navbar link End  -->
+        </div>
+        <!-- Header Js  -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+        <div class="header-color line-height"></div>
+
     </div>
-    <!-- Header Js  -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
-    <div class="header-color line-height"></div>
-
-</div>
-<!--   Header section End  -->
+    <!--   Header section End  -->
     <!-- ****  Header section End   *** -->
 
 
@@ -124,68 +124,36 @@
     <!-- project -->
 
     <!-- div 1 -->
-    <div class="px-6 lg:py-12 py-8 back-color-dark text-gray-800 text-center lg:text-left my-5" id="shivpuri">
+    <div class="px-6 lg:py-12 py-8 back-color-dark text-gray-800 text-center lg:text-left " id="shivpuri">
         <div class="container mx-auto xl:px-8">
-            <div class="grid lg:grid-cols-2 gap-6 flex items-center justify-center">
+            <div class="grid lg:grid-cols-2 gap-x-10 gap-y-6 justify-center">
 
                 <div class="mt-12 lg:mt-0">
                     <h1 class="lg:text-3xl font-bold text-color uppercase lg:px-4 text-lg py-2">
-                        Shivpuri Youth Forum  
+                        Shivpuri Youth Forum
                     </h1>
-                    <!-- <div class="p-4">
-                        <a href="#"
-                            class="header-color inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-center text-white border border-gray-300 hover:bg-red-800 focus:ring-4 focus:bg-sky-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                            Legal Aid Clinic
-                        </a>
-                    </div> -->
-                    <p class="max-w-2xl font-medium text-justify lg:text-base  lg:px-4">
-                        The Shivpuri Youth Forum (SYF) is a youth-led collective aimed at empowering and
-                        engaging
-                        young people in meaningful activities. Established in 2014, it provides a
-                        platform for
-                        local
-                        youth from Shivpuri to connect, discuss ideas, and tap into their creative
-                        potential.
+
+                    <p class="max-w-2xl font-medium text-justify lg:text-base  lg:px-4 pt-4">
+                        The Shivpuri Youth Forum (SYF) is a youth-led collective aimed at empowering and engaging young
+                        people in meaningful activities. Established in 2014, it provides a platform for local youth
+                        from Shivpuri towards inspiration, creativity and innovation.
                     </p>
 
-                    <p class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">
-                        Due to the lack of safe physical spaces in small towns and cities, young people
-                        often
-                        find
-                        themselves isolated. What they need is an environment that sparks inspiration,
-                        creativity
-                        and innovation. SYF was established with the aim to provide just that
-                        environment. The
-                        platform not only provides a reading space but also organizes cultural events,
-                        workshops,
-                        and debates, fostering a space for growth, expression, and breaking stereotypes.
-                        SYF
-                        leads
-                        an environment campaign called "Shivpuri Jalashay Sanrakshan Abhiyaan," with an
-                        attempt
-                        to
-                        restore the rich biodiversity and natural ecosystem of Shivpuri through
-                        collective
-                        action.
+                    <p class="max-w-2xl font-medium text-justify lg:text-base  lg:px-4 pt-2">
+                        Due to the s and cities, The platform caters to the lack of safe physical spaces in small towns
+                        by providing a reading space, organising cultural events, workshops, and debates - fostering a
+                        space for growth, expression, and breaking stereotypes. SYF leads an environment campaign called
+                        "Shivpuri Jalashay Sanrakshan Abhiyaan," with an attempt to restore the rich biodiversity and
+                        natural ecosystem of Shivpuri through collective action. SYF also successfully runs the kalam
+                        library - a library and counselling center to learn and engage with the aid of materials,
+                        newspapers and digital access to resources. The forum's vision is to build local resources and
+                        spaces, enabling equal access to opportunities and nurturing young leaders within the community.
                     </p>
 
-                    <p class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">
-                        SYF also successfully runs the kalam library - a library and counselling center
-                        which
-                        provides a reading space to the youth to learn and engage with the aid of
-                        materials,
-                        newspapers and digital access to resources. The forum's vision is to build local
-                        resources
-                        and spaces, enabling equal access to opportunities and nurturing young leaders
-                        within
-                        the
-                        community.
-                    </p>
 
                 </div>
                 <div class="mb-12 lg:mb-0 sm:place-self-center">
-                    <img src="./public/img/our-work/shivpuri-project.png" class="h-full w-full rounded-lg drop-shadow-2xl"
-                        alt="logo" />
+                    <img src="./public/img/our-work/shivpuri-project.png" class="h-full w-full rounded " alt="logo" />
                 </div>
             </div>
         </div>
@@ -193,14 +161,13 @@
 
     <!-- ****************  Div 2 ****************** -->
 
-    <div class="px-6 lg:py-12  py-8  header-color text-gray-800 text-center lg:text-left my-5" id="anil-dewan">
+    <div class="px-6 lg:py-12  py-8  header-color text-gray-800 text-center lg:text-left" id="anil-dewan">
 
         <div class="container mx-auto xl:px-8">
-            <div class="grid lg:grid-cols-2 gap-6 flex items-center justify-center">
+            <div class="  lg:grid  lg:grid-cols-2  gap-x-10 gap-y-6 flex flex-col-reverse justify-center">
 
                 <div class="mb-12 lg:mb-0 sm:place-self-center">
-                    <img src="./public/img/our-work/anil-dewan-project.png" class="h-full w-full rounded-lg drop-shadow-2xl"
-                        alt="logo" />
+                    <img src="./public/img/our-work/anil-dewan-project.png" class="h-full w-full rounded" alt="logo" />
                 </div>
 
                 <div class="mt-12 lg:mt-0">
@@ -209,40 +176,22 @@
 
                     </h1>
 
-                    <p class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4 text-white">
-                        Anil Divan Foundation has supported the setting up of a legal resource center
-                        for law
-                        students & young lawyers in Shivpuri. The Foundation has provided
-                        infrastructural
-                        support in
-                        setting up of the center by generously donated books & journals of the Anil B.
-                        Divan,
-                        who
-                        was an eminent jurist and a senior advocate in the Supreme Court.
+                    <p class="max-w-2xl font-medium text-justify lg:text-base  lg:px-4 text-second pt-4">
+                        Anil Divan Foundation has supported the setting up of a legal resource center for law students &
+                        young lawyers in Shivpuri. The Foundation has provided infrastructural support in setting up of
+                        the center by generously donating books & journals of hon’ble Anil B. Divan, who was an eminent
+                        jurist and a senior advocate in the Supreme Court.
                     </p>
-                    <p class="max-w-2xl font-medium text-justify lg:text-lg lg:px-4  text-white">
-                        The center has a remarkable collection of over 1500 books, including
-                        authoritative
-                        volumes
-                        such as the All India Reporter (AIR) manuals , law commission reports and
-                        jurisprudence
-                        from
-                        the United Kingdom (UK) and the United States (US). It also features insightful
-                        commentaries
-                        on national and international laws.
+                    <p class="max-w-2xl font-medium text-justify lg:text-base lg:px-4  text-second pt-2">
+                        The center has a remarkable collection of over 1500 books, including authoritative volumes such
+                        as the All India Reporter (AIR) manuals , law commission reports and jurisprudence from the
+                        United Kingdom (UK) and the United States (US). It also features insightful commentaries on
+                        national and international laws. This generous contribution by the Anil Diwan Foundation ensures
+                        that Anil Diwan's extensive knowledge and expertise in the legal field continue to benefit and
+                        inspire future generations of legal professionals.
                     </p>
 
-                    <p class="max-w-2xl font-medium text-justify lg:text-lg lg:px-4  text-white">This
-                        generous
-                        contribution by the Anil Diwan Foundation ensures that Anil Diwan's extensive
-                        knowledge
-                        and
-                        expertise in the legal field continue to benefit and inspire future generations
-                        of legal
-                        professionals and also enable Zenith to provide legal aid support to individuals
-                        and
-                        communities.
-                    </p>
+
 
                 </div>
 
@@ -252,80 +201,38 @@
 
 
     <!-- **************** Div 3 ****************** -->
-    <div class="px-6 lg:py-12 py-8 back-color-dark text-gray-800 text-center lg:text-left my-5" id="MPSIC">
+    <div class="px-6 lg:py-12 py-8 back-color-dark text-gray-800 text-center lg:text-left" id="MPSIC">
 
         <div class="container mx-auto xl:px-8">
-            <div class="grid lg:grid-cols-2 gap-6 flex items-center justify-center">
+            <div class="grid lg:grid-cols-2 gap-x-10 gap-y-6  justify-center">
 
                 <div class="mt-12 lg:mt-0">
                     <h1 class="lg:text-3xl font-bold text-color uppercase  lg:px-4 text-lg py-2 ">
                         Project MPSIC (Madhya Pradesh State Information Commission)
                     </h1>
-                    <!-- <div class="p-4">
-                                <a href="#"
-                                    class="support-bg inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-center text-white border border-gray-300 hover:bg-red-800 focus:ring-4 focus:bg-sky-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                                    Legal Aid Clinic
-                                </a>
-                            </div> -->
-                    <p class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">
-                        Shri Rahul Singh is an Information Commissioner in the Madhya Pradesh State
-                        Information
-                        Commission, a statutory body constituted under the Right to Information Act,
-                        2005 (RTI
-                        Act,
-                        2005).
+
+                    <p class="max-w-2xl font-medium text-justify lg:text-base  lg:px-4 pt-4">
+                        Project Madhya Pradesh State Information Commission is an initiative borne out from an MoU
+                        between Office of Rahul Singh, Information Commissioner MPSIC and Zenith to design strategies
+                        for improving the system of transparency and accountability in Madhya Pradesh. Shri Rahul Singh
+                        is an Information Commissioner in the Madhya Pradesh State Information Commission, a statutory
+                        body constituted under the Right to Information Act, 2005 (RTI Act, 2005).
                     </p>
 
-                    <p class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">
-                        Office of Rahul Singh, State Information Commissioner, MPSIC has entered into an
-                        MoU
-                        with
-                        Zenith to design strategies for improving the system of transparency and
-                        accountability
-                        in
-                        Madhya Pradesh. Shri Rahul Singh in his tenure has given many landmark orders to
-                        promote
-                        transparency regime, started a RTI helpline number for citizens, and even
-                        introduced
-                        online
-                        hearing of cases on WhatsApp and regular calls to make the system accessible to
-                        citizens
-                        in
-                        remote areas.
+                    <p class="max-w-2xl font-medium text-justify lg:text-base  lg:px-4 pt-2">
+                        Through this collaboration, Zenith provides research assistance in hearing and deciding the
+                        appeals and complaints; facilitates the Internship and; manages a RTI helpline, to assist
+                        citizens file RTI applications, appeals and create better understanding of the RTI Act. Zenith
+                        also facilitates awareness camps, training programs, workshops and seminars, to advance the
+                        understanding of the Act and its importance for transparency and accountability.
                     </p>
 
-                    <p class="max-w-2xl font-medium text-justify lg:text-lg  lg:p-4">Through this
-                        collaboration
-                        Zenith:
-                    </p>
-                    <ul>
-                        <li class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">a. Provides
-                            research
-                            assistance in hearing and deciding the appeals and complaints under
-                            the Act.
-                        </li>
-                        <li class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">b.
-                            Facilitates the
-                            Internship
-                            Program.</li>
-                        <li class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">c. Manages
-                            the RTI
-                            Helpline,
-                            a
-                            helpline number to help citizens file RTI applications,
-                            appeals and create better understanding of the Act.</li>
-                        <li class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">d. Organise
-                            awareness
-                            camps,
-                            training programs, workshops and seminars, to advance the
-                            understanding of the Act and its importance for transparency.</li>
-                    </ul>
+                    
                 </div>
 
 
                 <div class="mb-12 lg:mb-0 sm:place-self-center">
-                    <img src="./public/img/our-work/mpsic-min.jpeg" class="h-full w-full rounded-lg drop-shadow-2xl"
-                        alt="logo" />
+                    <img src="./public/img/our-work/mpsic-min.jpeg" class="h-full w-full rounded" alt="logo" />
                 </div>
 
             </div>
@@ -493,12 +400,12 @@
                 </div>
             </div>
             <div class="mt-6 border-t border-white/10 pt-8 sm:mt-20 flex justify-center lg:mt-24">
-               
-                    
 
 
 
-        
+
+
+
                 <p class="mt-8 text-sm leading-5 text-gray-400 md:order-1 md:mt-0 ">&copy; Zenith Society for Social
                     Legal Empowerment. All rights reserved.</p>
             </div>
