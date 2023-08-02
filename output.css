@@ -1110,6 +1110,11 @@ video {
   gap: 2rem;
 }
 
+.gap-x-10 {
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+}
+
 .gap-x-11 {
   -moz-column-gap: 2.75rem;
        column-gap: 2.75rem;
@@ -1167,21 +1172,6 @@ video {
 
 .gap-y-8 {
   row-gap: 2rem;
-}
-
-.gap-x-10 {
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
-}
-
-.gap-x-1 {
-  -moz-column-gap: 0.25rem;
-       column-gap: 0.25rem;
-}
-
-.gap-x-16 {
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
 }
 
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
@@ -1469,6 +1459,11 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .pb-2 {
@@ -2257,6 +2252,10 @@ img:nth-child(5) {
   }
 }
 
+.shivpuri-img{
+  height: 410px;
+}
+
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -2973,9 +2972,9 @@ img:nth-child(5) {
     padding-bottom: 2rem;
   }
 
-  .lg\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+  .lg\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .lg\:pt-24 {
@@ -2990,22 +2989,6 @@ img:nth-child(5) {
     padding-top: 2rem;
   }
 
-  .lg\:pl-8 {
-    padding-left: 2rem;
-  }
-
-  .lg\:pr-8 {
-    padding-right: 2rem;
-  }
-
-  .lg\:pr-12 {
-    padding-right: 3rem;
-  }
-
-  .lg\:pr-16 {
-    padding-right: 4rem;
-  }
-
   .lg\:text-left {
     text-align: left;
   }
@@ -3013,6 +2996,11 @@ img:nth-child(5) {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:text-4xl {
@@ -3043,11 +3031,6 @@ img:nth-child(5) {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 }
 
@@ -3097,4 +3080,3 @@ img:nth-child(5) {
     line-height: 1;
   }
 }
- 
