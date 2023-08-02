@@ -34,228 +34,174 @@
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <div class="w-full text-gray-300 bg-white drop-shadow-md">
-        <div x-data="{ open: false }"
-            class="p-4 flex flex-col max-w-screen-xl  mx-auto md:items-center md:justify-between md:flex-row gap-8 px-8">
+   <!--   Header section start  -->
+   <div class="w-full text-gray-300 bg-white drop-shadow-md">
+    <div x-data="{ open: false }"
+        class="p-4 flex flex-col lg:px-8  mx-auto md:items-center md:justify-between md:flex-row gap-8 px-2">
 
-            <div class="flex flex-row items-center justify-between">
+        <div class="flex flex-row items-center justify-between">
 
-                <a href="index.html"><img src="public/img/logo.png" alt="logo" class="h-full w-44"></a>
+            <a href="index.html"><img src="public/img/logo.png" alt="logo" class="h-full w-44"></a>
 
-                <button aria-label="hamberger-btn" class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
-                    @click="open = !open">
-                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-800">
-                        <path x-show="!open" fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path>
-                        <path x-show="open" fill-rule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            <button aria-label="hamberger-btn" class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+                @click="open = !open">
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-red-800">
+                    <path x-show="!open" fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                    <path x-show="open" fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navbar link  -->
+        <nav :class="{'flex': open, 'hidden': !open}"
+            class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+            <!-- <a class="px-4 py-2 mt-2 text-base font-semibold text-black rounded-lg  md:mt-0 hover:text-sky-600 hover:bg-gray-50 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="index.html">Home</a> -->
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                <button @click="open = !open" aria-label="navbar-links"
+                    class="text-black flex flex-row items-center w-full px-4 py-2 mt-2 text-sm  text-left bg-transparent rounded hover:bg-gray-50 hover:text-red-800  md:w-auto md:inline md:mt-0    focus:outline-none focus:shadow-outline">
+                    <span>ABOUT US </span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-            </div>
-
-            <!-- Navbar link  -->
-            <nav :class="{'flex': open, 'hidden': !open}"
-                class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row gap-4 p-6 lg:p-2">
-                <!-- Dropdown link  -->
-                <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open"
-                        class="text-black flex flex-row items-center w-full  text-sm text-left bg-transparent rounded-lg hover:text-red-800 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900    focus:outline-none focus:shadow-outline">
-                        <span> <a href="index.html">ABOUT US</a></span> <svg fill="currentColor" viewBox="0 0 20 20"
-                            :class="{'rotate-180': open, 'rotate-0': !open}"
-                            class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-
-                    <div x-show="open" x-transition:enter="transition ease-out duration-100"
-                        x-transition:enter-start="transform opacity-0 scale-95"
-                        x-transition:enter-end="transform opacity-100 scale-100"
-                        x-transition:leave="transition ease-in duration-75"
-                        x-transition:leave-start="transform opacity-100 scale-100"
-                        x-transition:leave-end="transform opacity-0 scale-95"
-                        class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-36">
-                        <div class="px-2 py-2 bg-white rounded-md shadow text-black">
-                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-lg  hover:text-red-800  md:mt-0 hover:text-gray-900  focus:outline-none focus:shadow-outline"
-                                href="#">OUR STORY</a>
-                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-lg  hover:text-red-800  md:mt-0 hover:text-gray-900  focus:outline-none focus:shadow-outline"
-                                href="#">TEAM</a>
-                        </div>
+                <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                    x-transition:enter-start="transform opacity-0 scale-95"
+                    x-transition:enter-end="transform opacity-100 scale-100"
+                    x-transition:leave="transition ease-in duration-75"
+                    x-transition:leave-start="transform opacity-100 scale-100"
+                    x-transition:leave-end="transform opacity-0 scale-95"
+                    class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-36">
+                    <div class="px-2 py-2 bg-white rounded-md shadow  text-black">
+                        <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded hover:bg-gray-50 hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                            href="our-story.html">OUR STORY</a>
+                        <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                            href="team.html">TEAM</a>
                     </div>
                 </div>
-                <!-- ******* -->
+            </div>
 
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
-                    href="our-work.html">OUR WORK</a>
 
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
-                    href="spaces.html">SPACES</a>
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
-                    href="stories.html">STORIES</a>
+            <!-- **** -->
+            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                href="our-work.html">OUR WORK</a>
+            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                href="spaces.html">SPACES</a>
+            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                href="stories.html">STORIES</a>
+            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                href="media-publication.html">MEDIA/PUBLICATIONS</a>
+            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                href="get-involved.html">WORK WITH US</a>
+            <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                href="contact.html">CONTACT US</a>
+            <a class="text-white  px-4 py-2 mt-2 text-sm header-color rounded   hover:bg-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
+                href="donate.html">DONATE</a>
 
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
-                    href="media-publication.html">MEDIA/PUBLICATIONS</a>
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
-                    href="#">WORK WITH US</a>
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
-                    href="contact.html">CONTACT US</a>
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800    md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
-                    href="donate.html">DONATE</a>
 
-            </nav>
-            <!-- Navbar link End  -->
-        </div>
-        <div class="header-color line-height"></div>
-
+        </nav>
+        <!-- Navbar link End  -->
     </div>
+    <!-- Header Js  -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <div class="header-color line-height"></div>
+
+</div>
+<!--   Header section End  -->
     <!-- ****  Header section End   *** -->
 
 
-    <!-- main body start -->
-    <section>
-        <div class="container mx-auto pt-16 lg:px-8 px-6 text-justify">
-            Working with Zenith involves immersing into the grassroot realities with diverse groups and needs. We engage
-            dedicated students and professionals from different backgrounds with the aim to create and foster access to
-            justice and support people in their struggle to find justice solutions.
-        </div>
+    <!-- project -->
 
-    </section>
+    <!-- project -->
 
+    <!-- div 1 -->
+    <div class="px-6 lg:py-12 py-8 back-color-dark text-gray-800 text-center lg:text-left my-5" id="shivpuri">
+        <div class="container mx-auto xl:px-8">
+            <div class="grid lg:grid-cols-2 gap-6 flex items-center justify-center">
 
-    <section>
-        <!-- div 1 -->
-        <div class="px-6 lg:py-12  text-gray-800 text-center lg:text-left my-5">
-            <div class="container mx-auto xl:px-8">
-                <div class="grid lg:grid-cols-2 lg:gap-12 flex items-center justify-center">
+                <div class="mt-12 lg:mt-0">
+                    <h1 class="lg:text-3xl font-bold text-color uppercase lg:px-4 text-lg py-2">
+                        Shivpuri Youth Forum  
+                    </h1>
+                    <!-- <div class="p-4">
+                        <a href="#"
+                            class="header-color inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-center text-white border border-gray-300 hover:bg-red-800 focus:ring-4 focus:bg-sky-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                            Legal Aid Clinic
+                        </a>
+                    </div> -->
+                    <p class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">
+                        The Shivpuri Youth Forum (SYF) is a youth-led collective aimed at empowering and
+                        engaging
+                        young people in meaningful activities. Established in 2014, it provides a
+                        platform for
+                        local
+                        youth from Shivpuri to connect, discuss ideas, and tap into their creative
+                        potential.
+                    </p>
 
-                    <div class="mb-12 lg:mb-0 sm:place-self-center">
-                        <img src="./public/img/get-involved/Internship-min.JPG"
-                            class="h-full w-full rounded-lg drop-shadow-2xl" alt="" />
-                    </div>
+                    <p class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">
+                        Due to the lack of safe physical spaces in small towns and cities, young people
+                        often
+                        find
+                        themselves isolated. What they need is an environment that sparks inspiration,
+                        creativity
+                        and innovation. SYF was established with the aim to provide just that
+                        environment. The
+                        platform not only provides a reading space but also organizes cultural events,
+                        workshops,
+                        and debates, fostering a space for growth, expression, and breaking stereotypes.
+                        SYF
+                        leads
+                        an environment campaign called "Shivpuri Jalashay Sanrakshan Abhiyaan," with an
+                        attempt
+                        to
+                        restore the rich biodiversity and natural ecosystem of Shivpuri through
+                        collective
+                        action.
+                    </p>
 
-                    <div class="mt-12 lg:mt-0">
-                        <h1 class="lg:text-4xl font-bold  capitalize  p-2 text-lg ">
-                            Internship
+                    <p class="max-w-2xl font-medium text-justify lg:text-lg  lg:px-4">
+                        SYF also successfully runs the kalam library - a library and counselling center
+                        which
+                        provides a reading space to the youth to learn and engage with the aid of
+                        materials,
+                        newspapers and digital access to resources. The forum's vision is to build local
+                        resources
+                        and spaces, enabling equal access to opportunities and nurturing young leaders
+                        within
+                        the
+                        community.
+                    </p>
 
-                        </h1>
-                        <!-- <div class="p-4">
-                            <a href="#"
-                                class="header-color inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-center text-white border border-gray-300 hover:bg-red-800 focus:ring-4 focus:bg-sky-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                                Legal Aid Clinic
-                            </a>
-                        </div> -->
-                        <p class="max-w-2xl font-medium text-justify  lg:px-4">
-                            The internship program is a short term engagement for young students to meaningfully engage
-                            with the grassroots realities. Centered around people’s rights and its enforcement, the
-                            program provides an opportunity for students to learn the necessary skills & tools to
-                            contribute and foster meaningful impact in the process of legal empowerment. The aim of the
-                            program is to develop perspective, empathy and sow the seed of changemaking in youngsters.
-
-                        </p>
-                        <p class="max-w-2xl font-medium text-justify  lg:px-4 py-2">
-                            Check the duration, eligibility and other details by clicking on
-                        </p>
-
-                        <p class="max-w-2xl font-medium text-justify  lg:px-4  py-2">
-                            <a class="text-color apply-link" href="">
-                                Apply
-                                here</a>
-                        </p>
-
-                    </div>
-
-
+                </div>
+                <div class="mb-12 lg:mb-0 sm:place-self-center">
+                    <img src="./public/img/our-work/shivpuri-project.png" class="h-full w-full rounded drop-shadow-2xl"
+                        alt="logo" />
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- ****************  Div 2 ****************** -->
+    <!-- ****************  Div 2 ****************** -->
 
-        <div class=" px-6 lg:py-12 text-gray-800 text-center lg:text-left my-5">
+    <div>
 
-            <div class=" container mx-auto xl:px-8">
-                <div class="grid lg:grid-cols-2 lg:gap-12 flex items-center justify-center">
-
-                    <div class="mt-12 lg:mt-0">
-                        <h1 class="lg:text-4xl font-bold capitalize  p-2 text-lg ">
-                            Volunteeship
-                        </h1>
-
-                        <p class="max-w-2xl font-medium text-justify lg:px-4">
-                            Zenith offers a long-term volunteership program designed for
-                            professionals, storytellers and students pursuing masters/phd in social
-                            sciences, law, design, filmaking etc to engage in research, advocacy and
-                            storytelling projects. Zenith offers a platform, access and network to
-                            facilitate such projects. We’re looking for individuals who are
-                            interested in themes such as tribal rights, legal empowerment, women
-                            rights, dalit rights, environment studies and other associated
-                            disciplines of social work which are in line with Zenith’s mission.
-                        </p>
-
-                        <p class="max-w-2xl font-medium text-justify  lg:px-4 py-2">
-                            Check the duration, eligibility and other details by clicking on
-                        </p>
-
-                        <p class="max-w-2xl font-medium text-justify   lg:px-4  py-2">
-                            <a class="text-color  apply-link" href="">
-                                Apply
-                                here</a>
-                        </p>
-                    </div>
-
-                    <div class=" mb-12 lg:mb-0 sm:place-self-center">
-                        <img src="./public/img/get-involved/Volunteer-min.jpeg"
-                            class="h-full w-full rounded-lg drop-shadow-2xl" alt="" />
-                    </div>
-
-                </div>
-            </div>
-        </div>
+    </div>
 
 
-        <!-- **************** Div 3 ****************** -->
+    <!-- **************** Div 3 ****************** -->
+  
+    <!-- project -->
 
-        <div class="px-6 lg:py-12  text-gray-800 text-center lg:text-left my-5">
-
-            <div class="container mx-auto xl:px-8">
-                <div class="grid lg:grid-cols-2 lg:gap-12 flex items-center justify-center">
-
-                    <div class="mb-12 lg:mb-0 sm:place-self-center">
-                        <img src="./public/img/get-involved/career-min.jpeg"
-                            class="h-full w-full rounded-lg drop-shadow-2xl" alt="" />
-                    </div>
-
-                    <div class="mt-12 lg:mt-0">
-                        <h1 class="lg:text-4xl font-bold  capitalize  p-2 text-lg ">
-                            Careers
-                        </h1>
-
-                        <p class="max-w-2xl font-medium text-justify lg:px-4 ">
-                            Zenith provides full-time employment and consultancies opportunities based on
-                            specific requirements and available vacancies. As part of the team,
-                            consultants/employees will have the opportunity to make a meaningful impact
-                            supporting marginalized communities. Join Zenith and embark on a rewarding
-                            career where you can actively work towards creating a more just and equitable
-                            society.
-                        </p>
-
-                        <p class="max-w-2xl font-medium text-justify lg:px-4 py-2">
-                            There are no current openings.
-                        </p>
-
-                        <p class="max-w-2xl font-medium text-justify lg:px-4 ">
-                            You can follow us on social media for regular updates about career
-                            opportunities. </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- main body end -->
 
 
     <!-- footer start-->
