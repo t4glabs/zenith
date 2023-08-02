@@ -437,4 +437,12 @@ img:nth-child(5) {
 } */
 
 
-
+@media only screen and (min-width: 1024px) {
+ 
+ 
+  .internship-image{
+    height: 310px;
+    width: 100%;
+  }
+  }
+ 
