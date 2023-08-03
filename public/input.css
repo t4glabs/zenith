@@ -394,11 +394,11 @@ img:nth-child(5) {
 
 
 @media only screen and (min-width: 1024px) {
- 
- 
-.testimonial-div{
-  height: 327px;
-}
+
+
+  .testimonial-div {
+    height: 327px;
+  }
 }
 
 /* @media only screen and (max-width: 783px) {
@@ -409,8 +409,8 @@ img:nth-child(5) {
   }
   } */
 
-/* .megha{
-  height: 600px;
+.megha{
+  height: 550px;
 }
 
 
@@ -434,18 +434,29 @@ img:nth-child(5) {
   .megha{
     height: 300px;
   }
-} */
+} 
+
+
 
 
 @media only screen and (min-width: 1024px) {
- 
- 
-  .internship-image{
+
+
+  .internship-image {
     height: 310px;
     width: 100%;
   }
-  }
- 
-.shivpuri-img{
+}
+
+.shivpuri-img {
   height: 410px;
+}
+
+
+
+
+
+.spaces-text-size{
+  padding-left: 5rem;
+    padding-right: 5rem;
 }

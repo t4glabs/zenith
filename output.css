@@ -890,8 +890,8 @@ video {
   width: 4rem;
 }
 
-.w-2\/5 {
-  width: 40%;
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .w-3\/4 {
@@ -937,22 +937,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-3\/5 {
-  width: 60%;
-}
-
-.w-3 {
-  width: 0.75rem;
-}
-
-.w-2 {
-  width: 0.5rem;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
 }
 
 .min-w-0 {
@@ -1367,11 +1351,6 @@ video {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
 .px-2 {
@@ -2198,7 +2177,7 @@ img:nth-child(5) {
 }
 
 @media only screen and (min-width: 1024px) {
-  .testimonial-div{
+  .testimonial-div {
     height: 327px;
   }
 }
@@ -2211,42 +2190,42 @@ img:nth-child(5) {
   }
   } */
 
-/* .megha{
-  height: 600px;
+.megha{
+  height: 550px;
 }
 
-
-
 @media only screen and (max-width: 750px) {
- 
   .megha{
     height: 500px;
   }
 }
 
 @media only screen and (max-width: 550px) {
- 
   .megha{
     height: 400px;
   }
 }
 
 @media only screen and (max-width: 450px) {
- 
   .megha{
     height: 300px;
   }
-} */
+}
 
 @media only screen and (min-width: 1024px) {
-  .internship-image{
+  .internship-image {
     height: 310px;
     width: 100%;
   }
 }
 
-.shivpuri-img{
+.shivpuri-img {
   height: 410px;
+}
+
+.spaces-text-size{
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .placeholder\:text-gray-400::-moz-placeholder {
@@ -2272,11 +2251,6 @@ img:nth-child(5) {
 .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-gray-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-indigo-500:hover {
@@ -2863,6 +2837,10 @@ img:nth-child(5) {
     padding: 2rem;
   }
 
+  .lg\:p-4 {
+    padding: 1rem;
+  }
+
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -2911,6 +2889,11 @@ img:nth-child(5) {
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .lg\:pt-24 {
