@@ -64,16 +64,17 @@
 
 </head>
 
-<body class="paragraphs-font bg-stone-50 font-sans leading-normal tracking-normal text-gray-700 text-base">
+<body class="paragraphs-font font-sans leading-normal tracking-normal text-gray-700 text-base">
 
     <!-- Header section Started  -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
+    <!--   Header section start  -->
     <div class="w-full text-gray-300 bg-white drop-shadow-md">
         <div x-data="{ open: false }"
-            class="p-4 flex flex-col max-w-screen-xl  mx-auto md:items-center md:justify-between md:flex-row gap-8 px-8">
+            class="p-4 flex flex-col lg:px-8  mx-auto md:items-center md:justify-between md:flex-row gap-8 px-2">
 
             <div class="flex flex-row items-center justify-between">
 
@@ -92,25 +93,22 @@
                 </button>
             </div>
 
-
-
-
             <!-- Navbar link  -->
             <nav :class="{'flex': open, 'hidden': !open}"
-                class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row gap-4 p-6 lg:p-2">
-                <!-- Dropdown link  -->
+                class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                <!-- <a class="px-4 py-2 mt-2 text-base font-semibold text-black rounded-lg  md:mt-0 hover:text-sky-600 hover:bg-gray-50 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="index.html">Home</a> -->
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open"
-                        class="text-black flex flex-row items-center w-full  text-sm text-left bg-transparent rounded-lg hover:text-red-800 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900    focus:outline-none focus:shadow-outline">
-                        <span> <a href="index.html">ABOUT US</a></span> <svg fill="currentColor" viewBox="0 0 20 20"
-                            :class="{'rotate-180': open, 'rotate-0': !open}"
+                    <button @click="open = !open" aria-label="navbar-links"
+                        class="text-black flex flex-row items-center w-full px-4 py-2 mt-2 text-sm  text-left bg-transparent rounded hover:bg-gray-50 hover:text-red-800  md:w-auto md:inline md:mt-0    focus:outline-none focus:shadow-outline">
+                        <span>ABOUT US </span>
+                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
                             class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
-
                     <div x-show="open" x-transition:enter="transition ease-out duration-100"
                         x-transition:enter-start="transform opacity-0 scale-95"
                         x-transition:enter-end="transform opacity-100 scale-100"
@@ -118,42 +116,43 @@
                         x-transition:leave-start="transform opacity-100 scale-100"
                         x-transition:leave-end="transform opacity-0 scale-95"
                         class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-36">
-                        <div class="px-2 py-2 bg-white rounded-md shadow text-black">
-                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-lg  hover:text-red-800  md:mt-0 hover:text-gray-900  focus:outline-none focus:shadow-outline"
+                        <div class="px-2 py-2 bg-white rounded-md shadow  text-black">
+                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded hover:bg-gray-50 hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
                                 href="our-story.html">OUR STORY</a>
-                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-lg  hover:text-red-800  md:mt-0 hover:text-gray-900  focus:outline-none focus:shadow-outline"
+                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
                                 href="team.html">TEAM</a>
                         </div>
                     </div>
                 </div>
-                <!-- ******* -->
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+
+
+                <!-- **** -->
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
                     href="our-work.html">OUR WORK</a>
-
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
                     href="spaces.html">SPACES</a>
-
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
                     href="stories.html">STORIES</a>
-
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
                     href="media-publication.html">MEDIA/PUBLICATIONS</a>
-
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
                     href="get-involved.html">WORK WITH US</a>
-
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                <a class="text-black  px-4 py-2 mt-2 text-sm  bg-transparent rounded  hover:bg-gray-50  hover:text-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
                     href="contact.html">CONTACT US</a>
-
-                <a class="text-black mt-2 text-sm   bg-transparent rounded-lg hover:text-red-800    md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline"
+                <a class="text-white  px-4 py-2 mt-2 text-sm header-color rounded   hover:bg-red-800   md:mt-0 focus:outline-none focus:shadow-outline"
                     href="donate.html">DONATE</a>
+
 
             </nav>
             <!-- Navbar link End  -->
         </div>
+        <!-- Header Js  -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
         <div class="header-color line-height"></div>
 
     </div>
+    <!--   Header section End  -->
     <!--   Header section End  -->
 
 
@@ -492,127 +491,15 @@
 
 
 
+    <!-- footer start-->
+    <footer class="bg-gray-900" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-24">
+            <div class="grid xl:grid-cols-4 xl:gap-8  lg:grid-cols-4  md:grid-cols-2 sm:grid-cols-2 gap-x-12 gap-y-8">
+                <div class="text-white">
 
-        <!-- Footer -->
-        <footer class="bg-gray-900" aria-labelledby="footer-heading">
-            <h2 id="footer-heading" class="sr-only">Footer</h2>
-            <div class="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-24">
-                <div class="xl:grid xl:grid-cols-4 xl:gap-8">
-                    <div class="text-white">
-
-                        <!-- <img src="public/img/home-page-icon/zenith-logo-med-trans.png" alt="logo-img" class=" w-64"> -->
-                        <a href="index.html"><img src="public/img/logo.png" alt="logo" class=" w-44"></a>
-                    </div>
-
-                    <div class="text-white">
-                        <h1 class="heading-font-family text-lg  text-white capitalize lg:text-2xl mb-4">
-                            IN MEDIA </h1>
-                        <!-- <p class="mt-2 text-sm leading-6 text-gray-300">The latest news, articles, and resources, sent to
-                                your inbox weekly.</p> -->
-                        <div class="media-flex">
-
-                            <div class="news-list-item">
-                                <div class="item-image">
-                                    <a
-                                        href="https://www.downtoearth.org.in/news/environment/ngt-stops-mining-in-ecologically-sensitive-madhav-national-park-in-madhya-pradesh-85290">
-                                        <img width="58" height="58" src="public/img/Instagram-img/Media-1.jpg"
-                                            class="attachment-thumbnail size-thumbnail wp-post-image" alt="a">
-                                    </a>
-                                </div>
-                                <div class="item-text-holder">
-                                    <h6 class="item-title">NGT stops mining </h6>
-                                    <div class="item-date"> 04 October 2022</div>
-                                </div>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="news-list-item">
-                                <div class="item-image">
-                                    <a href="">
-                                        <img width="58" height="100" src="public/img/Instagram-img/Malanpur.webp"
-                                            class="attachment-thumbnail size-thumbnail wp-post-image h-full" alt="a">
-                                    </a>
-                                </div>
-                                <div class="item-text-holder">
-                                    <h6 class="item-title">Malanpur-Migrant Workers </h6>
-                                    <div class="item-date">19 Feb 2022</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-white">
-                        <h1 class="heading-font-family text-lg  text-white capitalize lg:text-2xl mb-4">INSTAGRAM </h1>
-                        <!-- <p class="mt-2 text-sm leading-6 text-gray-300">The latest news, articles, and resources, sent to
-                                your inbox weekly.</p> -->
-                        <div class="instagram-grid">
-
-
-                            <div class="mkd-instagram-item-holder">
-                                <a href="https://www.instagram.com/zenithssle/" target="_blank">
-                                    <img class="insta-img" src="public/img/Instagram-img/zenith-insta-1.jpg" alt="">
-                                </a>
-                            </div>
-
-
-                            <div class="mkd-instagram-item-holder">
-                                <a href="https://www.instagram.com/zenithssle/" target="_blank">
-                                    <img class="insta-img" src="public/img/Instagram-img/zenith-insta-2.jpg" alt="">
-                                </a>
-                            </div>
-
-
-                            <div class="mkd-instagram-item-holder">
-                                <a href="https://www.instagram.com/zenithssle/" target="_blank">
-                                    <img class="insta-img" src="public/img/Instagram-img/zenith-insta-3.jpg" alt="">
-                                </a>
-                            </div>
-
-
-                            <div class="mkd-instagram-item-holder">
-                                <a href="https://www.instagram.com/zenithssle/" target="_blank">
-                                    <img class="insta-img" src="public/img/Instagram-img/zenith-insta--4.jpg" alt="">
-                                </a>
-                            </div>
-
-
-                            <div class="mkd-instagram-item-holder">
-                                <a href="https://www.instagram.com/zenithssle/" target="_blank">
-                                    <img class="insta-img" src="public/img/Instagram-img/zenith-insta-5.jpg" alt="">
-                                </a>
-                            </div>
-
-
-                            <div class="mkd-instagram-item-holder">
-                                <a href="https://www.instagram.com/zenithssle/" target="_blank">
-                                    <img class="insta-img" src="public/img/Instagram-img/zenith-insta-6.jpg" alt="">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- </div> -->
-                    <div class="mt-10 xl:mt-0">
-                        <h1 class="heading-font-family text-lg  text-white capitalize lg:text-2xl mb-4">
-                            SUBSCRIBE</h1>
-                        <p class="mt-2 text-sm leading-6 text-gray-300">The latest news, articles, and resources,
-                            sent to
-                            your inbox weekly.</p>
-                        <form class="mt-6 sm:flex sm:max-w-md">
-                            <label for="email-address" class="sr-only">Email address</label>
-                            <input type="email" name="email-address" id="email-address" autocomplete="email" required
-                                class="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
-                                placeholder="Enter your email">
-                            <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-                                <button type="submit"
-                                    class="flex w-full items-center justify-center rounded-md bg-orange-700 px-3 py-2 text-sm  text-white shadow-sm hover:bg-orange-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div
-                    class="mt-16 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
-                    <div class="flex space-x-6 md:order-2">
+                    <a href="index.html"><img src="public/img/zenith-white-logo.png" alt="logo" class=" w-44"></a>
+                    <div class="flex space-x-6 md:order-2 mt-8">
                         <a href="https://www.facebook.com/zenithfeelthechange "
                             class="text-gray-500 hover:text-gray-400">
                             <span class="sr-only">Facebook</span>
@@ -638,22 +525,12 @@
                             </svg>
                         </a>
 
-                        <!-- <a href="#" class="text-gray-500 hover:text-gray-400">
-                            <span class="sr-only">GitHub</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a> -->
+
 
                         <a href="https://www.linkedin.com/company/zenith-society-for-socio-legal-empowerment/"
                             class="text-gray-500 hover:text-gray-400">
                             <span class="sr-only">LinkedIn</span>
-                            <!-- <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.5 3H4.5C3.121 3 2 4.121 2 5.5v13C2 19.879 3.121 21 4.5 21h15c1.379 0 2.5-1.121 2.5-2.5v-13C22 4.121 20.879 3 19.5 3zM8 18h-2v-7h2v7zM7 9.125c-.689 0-1.25-.561-1.25-1.25s.561-1.25 1.25-1.25 1.25.561 1.25 1.25-.561 1.25-1.25 1.25zM18 18h-2v-3.938c0-1.281-.438-2.563-1.688-2.563-1.688 0-1.938 1.313-1.938 2.5V18h-2V8h2v1.313h.063c.313-.594 1.125-1.25 2.313-1.25 2.469 0 2.937 1.625 2.937 3.75V18z" />
-                            </svg> -->
+
                             <svg class="sw-6 h-6" aria-hidden="true" focusable="false" data-prefix="fab"
                                 data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                                 data-fa-i2svg="">
@@ -664,19 +541,134 @@
                         </a>
 
                     </div>
-                    <p class="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">&copy; 2020 Your Company,
-                        Inc. All
-                        rights reserved.</p>
                 </div>
-                <p class="mt-4 text-xs leading-5  md:order-1 md:mt-0 text-gray-300">
-                    built with 🤍 by <a
-                        href="https://t4glabs.discourse.group/u?cards=no&group=Tech4Good-Fellows&order=likes_received&period=all"
-                        target="_blank" class="text-gray-300 hover:text-white">Tech4Good Fellows</a> & Hosted Freely
-                    on <a href="#" class="text-gray-300 hover:text-white">Github Pages</a>
-                    </a>
-                </p>
+
+                <div class="text-white">
+                    <h1 class="heading-font-family text-lg  text-white capitalize lg:text-2xl mb-4">
+                        IN MEDIA </h1>
+                    <!-- <p class="mt-2 text-sm leading-6 text-gray-300">The latest news, articles, and resources, sent to
+                            your inbox weekly.</p> -->
+                    <div class="media-flex">
+
+                        <div class="news-list-item">
+                            <div class="item-image">
+                                <a
+                                    href="https://www.downtoearth.org.in/news/environment/ngt-stops-mining-in-ecologically-sensitive-madhav-national-park-in-madhya-pradesh-85290">
+                                    <img width="58" height="58" src="public/img/Instagram-img/Media-1.jpg"
+                                        class="attachment-thumbnail size-thumbnail wp-post-image" alt="a">
+                                </a>
+                            </div>
+                            <div class="item-text-holder">
+                                <h6 class="item-title">NGT stops mining </h6>
+                                <div class="item-date"> 04 October 2022</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="news-list-item">
+                            <div class="item-image">
+                                <a href="">
+                                    <img width="58" height="100" src="public/img/Instagram-img/Malanpur.webp"
+                                        class="attachment-thumbnail size-thumbnail wp-post-image h-full" alt="a"> </a>
+                            </div>
+                            <div class="item-text-holder">
+                                <h6 class="item-title">Malanpur-Migrant Workers </h6>
+                                <div class="item-date">19 Feb 2022</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-white">
+                    <h1 class="heading-font-family text-lg  text-white capitalize lg:text-2xl mb-4">INSTAGRAM </h1>
+                    <!-- <p class="mt-2 text-sm leading-6 text-gray-300">The latest news, articles, and resources, sent to
+                            your inbox weekly.</p> -->
+                    <div class="instagram-grid">
+
+
+                        <div class="mkd-instagram-item-holder">
+                            <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                                <img class="insta-img" src="public/img/Instagram-img/zenith-insta-1.jpg" alt="">
+                            </a>
+                        </div>
+
+
+                        <div class="mkd-instagram-item-holder">
+                            <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                                <img class="insta-img" src="public/img/Instagram-img/zenith-insta-2.jpg" alt="">
+                            </a>
+                        </div>
+
+
+                        <div class="mkd-instagram-item-holder">
+                            <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                                <img class="insta-img" src="public/img/Instagram-img/zenith-insta-3.jpg" alt="">
+                            </a>
+                        </div>
+
+
+                        <div class="mkd-instagram-item-holder">
+                            <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                                <img class="insta-img" src="public/img/Instagram-img/zenith-insta--4.jpg" alt="">
+                            </a>
+                        </div>
+
+
+                        <div class="mkd-instagram-item-holder">
+                            <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                                <img class="insta-img" src="public/img/Instagram-img/zenith-insta-5.jpg" alt="">
+                            </a>
+                        </div>
+
+
+                        <div class="mkd-instagram-item-holder">
+                            <a href="https://www.instagram.com/zenithssle/" target="_blank">
+                                <img class="insta-img" src="public/img/Instagram-img/zenith-insta-6.jpg" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- </div> -->
+                <div class="mt-10 xl:mt-0">
+                    <h1 class="heading-font-family text-lg  text-white capitalize lg:text-2xl mb-4">
+                        SUBSCRIBE</h1>
+                    <p class="mt-2 text-sm leading-6 text-gray-300">The latest news, articles, and resources,
+                        sent to
+                        your inbox weekly.</p>
+                    <form class="mt-6 sm:flex sm:max-w-md">
+                        <label for="email-address" class="sr-only">Email address</label>
+                        <input type="email" name="email-address" id="email-address" autocomplete="email" required
+                            class="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
+                            placeholder="Enter your email">
+                        <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
+                            <button type="submit"
+                                class="flex w-full items-center justify-center rounded-md bg-orange-700 px-3 py-2 text-sm  text-white shadow-sm hover:bg-orange-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </footer>
+            <div class="mt-6 border-t border-white/10 pt-8 sm:mt-20 flex justify-center lg:mt-24">
+               
+                    
+
+
+
+        
+                <p class="mt-8 text-sm leading-5 text-gray-400 md:order-1 md:mt-0 ">&copy; Zenith Society for Social
+                    Legal Empowerment. All rights reserved.</p>
+            </div>
+            <p class="mt-4 text-xs leading-5  md:order-1 md:mt-0 text-gray-300 text-center">
+                built with 🤍 by
+                <a href="https://t4glabs.discourse.group/u?cards=no&group=Tech4Good-Fellows&order=likes_received&period=all"
+                    target="_blank" class="text-gray-300 hover:text-red-400 px-1"> Tech4Good Fellows </a>& Hosted Freely
+                on<a href="#" class="text-gray-300 hover:text-red-400 px-1"> Github Pages</a>
+                </a>
+            </p>
+
+        </div>
+    </footer>
+    <!-- </footer> -->
 
 
         <script src="index.js"></script>
