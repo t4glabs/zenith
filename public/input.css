@@ -409,32 +409,32 @@ img:nth-child(5) {
   }
   } */
 
-.megha{
+.megha {
   height: 550px;
 }
 
 
 
 @media only screen and (max-width: 750px) {
- 
-  .megha{
+
+  .megha {
     height: 500px;
   }
 }
 
 @media only screen and (max-width: 550px) {
- 
-  .megha{
+
+  .megha {
     height: 400px;
   }
 }
 
 @media only screen and (max-width: 450px) {
- 
-  .megha{
+
+  .megha {
     height: 300px;
   }
-} 
+}
 
 
 
@@ -456,7 +456,7 @@ img:nth-child(5) {
 
 
 
-.spaces-text-size{
+.spaces-text-size {
   padding-left: 5rem;
-    padding-right: 5rem;
+  padding-right: 5rem;
 }

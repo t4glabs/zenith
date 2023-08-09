@@ -762,6 +762,18 @@ video {
   margin-top: 2rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
 .block {
   display: block;
 }
@@ -2120,24 +2132,24 @@ img:nth-child(5) {
   }
   } */
 
-.megha{
+.megha {
   height: 550px;
 }
 
 @media only screen and (max-width: 750px) {
-  .megha{
+  .megha {
     height: 500px;
   }
 }
 
 @media only screen and (max-width: 550px) {
-  .megha{
+  .megha {
     height: 400px;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  .megha{
+  .megha {
     height: 300px;
   }
 }
@@ -2153,7 +2165,7 @@ img:nth-child(5) {
   height: 410px;
 }
 
-.spaces-text-size{
+.spaces-text-size {
   padding-left: 5rem;
   padding-right: 5rem;
 }
