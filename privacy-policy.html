@@ -27,7 +27,7 @@
 
 </head>
 
-<body class="paragraphs-font  font-sans leading-normal tracking-normal text-gray-700  text-base lg:text-lg">
+<body class="paragraphs-font font-sans leading-normal tracking-normal">
 
     <!-- Header section Started  -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -60,7 +60,7 @@
             <nav :class="{'flex': open, 'hidden': !open}"
                 class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
                 <!-- <a class="px-4 py-2 mt-2 text-base font-semibold text-black rounded-lg  md:mt-0 hover:text-sky-600 hover:bg-gray-50 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                href="index.html">Home</a> -->
+            href="index.html">Home</a> -->
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
                     <button @click="open = !open" aria-label="navbar-links"
                         class="text-black flex flex-row items-center w-full px-4 py-2 mt-2 text-sm  text-left bg-transparent rounded hover:bg-gray-50 hover:text-red-800  md:w-auto md:inline md:mt-0    focus:outline-none focus:shadow-outline">
@@ -116,158 +116,44 @@
 
     </div>
     <!--   Header section End  -->
-    <!-- ****  Header section End   *** -->
 
 
-    <!-- main body section started  -->
+    <!-- privacy policy -->
+    <section>
+        <div class="text-justify mx-auto lg:px-20 px-4 md:px-8 max-w-7xl py-12">
 
-    <div class="lg:px-24  p-6">
-        <img class="w-full lg:h-screen lg:px-12" src="public/img/Our-story/cover-image.jpg" alt="">
-
-    </div>
-
-    <div class="bg-white">
-        <div class="mx-auto max-w-6xl px-4 py-2 sm:px-6  lg:px-16 text-justify">
-            <p class="max-w-1xl p-1 text-xl  ">
-                Zenith Society for Socio-Legal Empowerment is a non-profit organisation working on grassroot legal
-                empowerment of Adivasi, Dalit, and other marginalised communities in the state of Madhya Pradesh, India.
+            <h1 class=" max-w-5xl text-2xl leading-8 sm:text-4xl text-center sm:text-center mb-6">
+                Privacy Policy </h1>
+            <p class="p-1">
+                We at Zenith value privacy and are committed to the ethical collection, retention and use of information
+                that you provide to us. We do not share the information shared by you with anyone.
             </p>
 
-            <p class="max-w-1xl p-1">Zenith works with the community in order to build their
-                capacity in understanding their legal rights,
-                defining their ideas of change, and taking appropriate measures in order to live a more just and
-                dignified life. <i>Zenith is a registered society
-                    under the Madhya Pradesh Societies Registration Act, 1973.</i> </p>
+            <p class="p-1">
+                We use the information you give us in the following ways:
 
+            <ul class="px-8 pb-4 list-disc">
+                <li>
+                    To make sure we have an accurate record of all the donations we receive.
 
-        </div>
-    </div>
-    </div>
+                </li>
+                <li>To email you with news and information about us and our campaigns, but only if you have agreed to
+                    this.</li>
 
-    <div class="bg-white">
-        <div class=" mx-auto max-w-7xl px-4 py-8 sm:px-6  lg:px-20  grid grid-cols-1 gap-y-8">
-            <!-- Why section  -->
-
-            <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6 lg:gap-2 items-center back-color bg-white">
-
-                <div class="p-4">
-                    <h1
-                        class="lg:px-8 heading-font-family max-w-4xl lg:mb-4  text-2xl font-bold tracking-tight leading-8 sm:text-3xl text-start   text-color ">
-                        Why?</h1>
-                    <p class=" text-base lg:text-lg lg:px-8 text-justify">
-                        Marginalized communities in India do not have access to justice delivery systems as they
-                        continue to be subjected to institutional and structural violence. Historical denial of rights
-                        often makes people unable to fathom a just society or even their own capabilities to be agents
-                        of change.
-                    </p>
-
-                </div>
-
-                <div>
-                    <img src="public/img/Our-story/why_.JPG" class="w-full " alt="icon" />
-                </div>
-
-            </div>
-
-
-            <!-- What section  -->
-
-
-
-
-
-
-            <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6 lg:gap-8 items-center back-color bg-white ">
-                <div>
-                    <img src="public/img/Our-story/whatimg.jpg" class="w-full " alt="icon" />
-                </div>
-
-                <div class="p-4">
-                    <h1
-                        class="lg:px-8 heading-font-family max-w-4xl lg:mb-4  text-2xl font-bold tracking-tight leading-8 sm:text-3xl text-start   text-color ">
-                        What?</h1>
-                    <p class=" text-base lg:text-lg lg:px-8 text-justify">
-                        Zenith works towards legal empowerment of Adivasi, Dalit, and other marginalized groups focusing
-                        on the collective outcome envisioned by the community. Activating their agency to unlock the
-                        tools and processes with and beyond law and legal systems.
-                    </p>
-
-                </div>
-
-
-            </div>
-            <!-- HOW section  -->
-
-
-            <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6 lg:gap-8 items-center back-color bg-white">
-
-                <div class="p-4">
-                    <h1
-                        class="lg:px-8 heading-font-family max-w-4xl lg:mb-4  text-2xl font-bold tracking-tight leading-8 sm:text-3xl text-start   text-color ">
-                        How?</h1>
-                    <p class=" text-base lg:text-lg lg:px-8 text-justify">
-                        We equip community members and young people with an ecosystem of resources, skills and tools to
-                        identify and voice their struggles towards finding innovative justice solutions.
-                    </p>
-
-                </div>
-                <div>
-                    <img src="public/img/Our-story/how.JPG" class="w-full " alt="icon" />
-                </div>
-
-            </div>
-
-
-
-        </div>
-    </div>
-
-
-
-    <div class="bg-white p-2">
-        <div class=" mx-auto max-w-7xl px-4 py-8 sm:px-6  lg:px-20">
-            <div>
-                <img src="public/img/Our-story/Img-1.png" class="lg:w-full  lg:img-size-our-story" alt="icon" />
-            </div>
-            <div class="">
-                <p class="  text-base lg:text-lg px-4 pt-6">
-                    The heart of our vision lies in community empowerment and democratizing power.
-                </p>
-
-                <p class="  text-base lg:text-base p-4 italic">
-                    <a href="our-work.html" class="text-red-800 hover:underline">Our Work</a> is thus deliberately
-                    diverse. We work with people on issues they consider
-                    prominent from land, criminal justice, social security to the environment.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-    <div class="bg-white p-2">
-        <div class=" mx-auto max-w-7xl px-4 pb-8 sm:px-6  lg:px-20">
-            <div class="">
-                <img src="public/img/Our-story/Prize-Img.jpeg" class="lg:w-full  lg:img-size-our-story" alt="icon" />
-            </div>
-            <p class="  text-base lg:text-lg pt-4 p-4">
-                Zenith won the Agami Idea Prize in 2020 for their idea on reforming Clinical Legal Education.
+                <li>To find out more about you and the people who are visiting our website, donating or joining our
+                    campaign.</li>
+            </ul>
             </p>
 
+            <p class="p-1 ">
+                As and when the need arises, we may alter its privacy policy in accordance with the latest technology
+                and trends. We strive to provide you with timely notice of these changes. You may reach out to us if you
+                have any queries about any changes made to our practices.
+            </p>
         </div>
-
-    </div>
-
+    </section>
 
 
-
-    <!-- main body section End  -->
 
     <!-- footer start-->
     <footer class="bg-gray-900" aria-labelledby="footer-heading">
@@ -437,12 +323,8 @@
                     </form>
                 </div>
             </div>
+
             <div class="mt-6 border-t border-white/10 pt-8 sm:mt-20 flex justify-center lg:mt-24">
-
-
-
-
-
 
                 <p class="mt-8 text-sm leading-5 text-gray-400 md:order-1 md:mt-0 ">&copy; Zenith Society for Social
                     Legal Empowerment. All rights reserved.</p>
@@ -458,6 +340,7 @@
         </div>
     </footer>
     <!-- </footer> -->
+
     <script src="index.js"></script>
 
 </body>
