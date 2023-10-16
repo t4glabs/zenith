@@ -9,7 +9,11 @@ module.exports = {
         '104': '26rem',
         '144': '36rem',
   
-      }
+      },
+      height:{
+        '39':'152px',
+        '82':'360px',
+      },
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
