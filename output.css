@@ -1004,11 +1004,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.rotate-90 {
-  --tw-rotate: 90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .scale-100 {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
@@ -1280,16 +1275,12 @@ video {
   --tw-bg-opacity: 0.2;
 }
 
-.bg-\[url\(\'public\/img\/hero-img\.png\'\)\] {
-  background-image: url('public/img/hero-img.png');
+.bg-\[url\(\'public\/img\/new-hero-img\.jpg\'\)\] {
+  background-image: url('public/img/new-hero-img.jpg');
 }
 
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'public\/img\/new-hero-img\.jpg\'\)\] {
-  background-image: url('public/img/new-hero-img.jpg');
 }
 
 .from-\[\#ff80b5\] {
@@ -1430,6 +1421,11 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-2 {
@@ -1977,7 +1973,7 @@ p {
 }
 
 .pro-one:hover .image-one {
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 .pro-one:hover .text-head {
@@ -2865,6 +2861,11 @@ img:nth-child(5) {
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .lg\:pt-2 {
